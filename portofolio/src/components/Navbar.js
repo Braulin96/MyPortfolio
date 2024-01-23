@@ -7,8 +7,6 @@ const Navbar = () => {
   const [hideNavbar, setHideNavbar] = useState(true); // to hide the Horizontal nav and show de NavIcon when scrolling
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  console.log("showNavbar:", showNavIcon);
-
   // useEffect to update the window size
   useEffect(() => {
     const handleResize = () => {
@@ -44,7 +42,7 @@ const Navbar = () => {
 
   const HorizontalNavList = () => {
     return (
-      <div className="flex text-[#4F5853] justify-end h-12 my-auto transform transition-translate mt-4">
+      <div className="flex text-[#4F5853] justify-end h-12 my-auto transform transition-translate mt-4 animate-delay-50 animate-duration-1000 animate-once animate-fade-left">
         <ul className="my-auto flex gap-x-16">
           <li>Home</li>
           <li>About</li>
@@ -58,7 +56,10 @@ const Navbar = () => {
 
   const VerticalNavList = () => {
     return (
-      <div className="flex flex-col bg-[#4f5853] text-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full">
+      <div
+        className="flex flex-col bg-[#4f5853] text-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full
+        animate-delay-100 animate-duration-1000 animate-once animate-flip-down"
+      >
         <button onClick={() => setShowNavIcon(true)}>
           <IoCloseSharp size={30} className="ml-auto mt-3 mr-3" />
         </button>
@@ -76,7 +77,7 @@ const Navbar = () => {
 
   const NavIcon = () => {
     return (
-      <div className="my-auto justify-end flex flex-col gap-y-4 h-12  mt-4">
+      <div className="my-auto justify-end flex flex-col gap-y-4 h-12 mt-4 animate-delay-50 animate-once animate-fade-left">
         <button
           onClick={() => setShowNavIcon(false)}
           className="bg-[#68736C] flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out"
