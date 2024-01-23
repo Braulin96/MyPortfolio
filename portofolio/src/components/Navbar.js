@@ -3,11 +3,11 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = () => {
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [listNavbar, setListNavbar] = useState(true);
+  const [showNavIcon, setShowNavIcon] = useState(true); // to change the NavIcon to VerticalNav
+  const [hideNavbar, setHideNavbar] = useState(true); // to hide the Horizontal nav and show de NavIcon when scrolling
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  console.log("showNavbar:", showNavbar);
+  console.log("showNavbar:", showNavIcon);
 
   // useEffect to update the window size
   useEffect(() => {
@@ -28,9 +28,9 @@ const Navbar = () => {
       const scrollY = window.scrollY;
 
       if (scrollY > 100) {
-        setListNavbar(false);
+        setHideNavbar(false);
       } else {
-        setListNavbar(true);
+        setHideNavbar(true);
       }
     };
 
@@ -44,7 +44,7 @@ const Navbar = () => {
 
   const HorizontalNavList = () => {
     return (
-      <div className="flex text-[#4F5853] justify-end h-12 my-auto">
+      <div className="flex text-[#4F5853] justify-end h-12 my-auto transform transition-translate mt-4">
         <ul className="my-auto flex gap-x-16">
           <li>Home</li>
           <li>About</li>
@@ -58,15 +58,8 @@ const Navbar = () => {
 
   const VerticalNavList = () => {
     return (
-      <div
-        className={`flex flex-col bg-[#4f5853] text-white text-xl fixed right-0 w-full sm:w-60 md:w-72`}
-        style={{
-          height: "100vh",
-          transform: showNavbar ? "translateX(0px)" : "translateX(1000px)",
-          transition: "transform 0.3s ease-in-out",
-        }}
-      >
-        <button>
+      <div className="flex flex-col bg-[#4f5853] text-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full">
+        <button onClick={() => setShowNavIcon(true)}>
           <IoCloseSharp size={30} className="ml-auto mt-3 mr-3" />
         </button>
 
@@ -83,9 +76,9 @@ const Navbar = () => {
 
   const NavIcon = () => {
     return (
-      <div className="my-auto justify-end flex flex-col gap-y-4 h-12">
+      <div className="my-auto justify-end flex flex-col gap-y-4 h-12  mt-4">
         <button
-          //onClick={() => setShowNavbar(false)}
+          onClick={() => setShowNavIcon(false)}
           className="bg-[#68736C] flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out"
         >
           <RxHamburgerMenu color="white" size={24} />
@@ -96,17 +89,20 @@ const Navbar = () => {
 
   return (
     <div className="max-w-7xl relative">
-      {/* <VerticalNavList /> */}
-      <div className="fixed flex w-auto sm:right-20 right-5 top-4">
+      <div className="fixed flex w-auto sm:right-20 right-5">
         <div className="mx-auto h-full flex flex-col">
           {windowWidth <= 640 ? (
-            <div>
+            showNavIcon ? (
               <NavIcon />
-            </div>
-          ) : listNavbar ? (
+            ) : (
+              <VerticalNavList />
+            )
+          ) : hideNavbar ? (
             <HorizontalNavList />
-          ) : (
+          ) : showNavIcon ? (
             <NavIcon />
+          ) : (
+            <VerticalNavList />
           )}
         </div>
       </div>
