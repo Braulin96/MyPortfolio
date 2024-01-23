@@ -21,7 +21,19 @@ const NavList = () => {
 const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [listNavbar, setListNavbar] = useState(true);
-  console.log("listNavbar:", listNavbar);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,7 +58,11 @@ const Navbar = () => {
   return (
     <div className="max-w-7xl relative">
       <div className="fixed flex w-auto right-20 top-4">
-        <div className="bg-white mx-auto h-full flex flex-col">
+        <div
+          className={`mx-auto h-full flex flex-col ${
+            windowWidth >= 600 ? "bg-green-400" : "bg-red-500"
+          }`}
+        >
           {listNavbar ? (
             <NavList />
           ) : (
