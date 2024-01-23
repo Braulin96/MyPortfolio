@@ -1,12 +1,9 @@
+import HeroSection from "./components/HeroSection";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit  reload.
-        </p>
-      </header>
+      <HeroSection/>
     </div>
   );
 }
