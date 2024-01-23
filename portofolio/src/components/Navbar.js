@@ -27,21 +27,6 @@ const NavIcon = () => {
       >
         <RxHamburgerMenu color="white" size={24} />
       </button>
-      {/* {showNavbar ? (
-          <button
-            onClick={() => setShowNavbar(false)}
-            className="bg-[#68736C] flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out"
-          >
-            <RxHamburgerMenu color="white" size={24} />
-          </button>
-        ) : (
-          <button
-            onClick={() => setShowNavbar(true)}
-            className="my-auto transition-all duration-300 ease-in-out w-fit flex ml-auto"
-          >
-            <IoCloseSharp className="ml-auto" size={36} color="#68736C" />
-          </button>
-        )} */}
     </div>
   );
 };
@@ -86,12 +71,14 @@ const Navbar = () => {
   return (
     <div className="max-w-7xl relative">
       <div className="fixed flex w-auto right-20 top-4">
-        <div
-          className={`mx-auto h-full flex flex-col ${
-            windowWidth >= 640 ? "bg-green-400" : "bg-red-500"
-          }`}
-        >
-          {listNavbar ? <NavList /> : <NavIcon />}
+        <div className="mx-auto h-full flex flex-col">
+          {windowWidth <= 640 ? (
+            <NavIcon />
+          ) : listNavbar ? (
+            <NavList />
+          ) : (
+            <NavIcon />
+          )}
         </div>
       </div>
     </div>
