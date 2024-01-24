@@ -1,12 +1,12 @@
+import HeroSection from "components/HeroSection";
+import Navbar from "components/Navbar";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit  reload.
-        </p>
-      </header>
+      <Navbar/>
+      <HeroSection/>
     </div>
   );
 }
