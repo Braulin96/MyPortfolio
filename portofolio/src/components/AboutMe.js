@@ -1,6 +1,5 @@
-import React from "react";
 
-function AboutMe() {
+const AboutMe = () => {
   return (
     <div className="text-red-500" style={{ height: "100vh" }}>
       <div className="max-w-7xl h-full flex items-center justify-center mx-auto ">
@@ -20,5 +19,4 @@ function AboutMe() {
     </div>
   );
 }
-
 export default AboutMe;
