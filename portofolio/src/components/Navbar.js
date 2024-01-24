@@ -89,9 +89,9 @@ const Navbar = () => {
   };
 
   return (
-    <div className="max-w-7xl relative">
-      <div className="fixed flex w-auto sm:right-20 right-5">
-        <div className="mx-auto h-full flex flex-col">
+    <div className=" fixed flex sm:right-20 right-5 w-full">
+      <div className="w-full flex max-w-7xl mx-auto">
+        <div className=" h-full flex flex-col ml-auto">
           {windowWidth <= 640 ? (
             showNavIcon ? (
               <NavIcon />
