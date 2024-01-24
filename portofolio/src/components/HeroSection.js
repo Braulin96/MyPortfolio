@@ -4,7 +4,7 @@ import { GoArrowUpRight } from "react-icons/go";
 const HeroSection = () => {
   return (
     <div>
-      <div className="text-red-500 h-[700px]">
+      <div className="text-red-500 md:h-[850px] h-[650px]">
         <div className="max-w-7xl bg-white mx-auto h-full flex flex-col">
           <div className="my-auto mx-auto text-center flex flex-col gap-y-4">
             <p
@@ -13,8 +13,11 @@ const HeroSection = () => {
             >
               Braulin Pires
             </p>
-            <p className="text-3xl text-[#4F5853] font-extralight">
+            <p className="text-3xl text-[#4F5853] font-extralight animate-once animate-jump-in hidden sm:flex ">
               Front-End Developer - Web Designer
+            </p>
+            <p className="text-3xl text-[#4F5853] font-extralight animate-once animate-jump-in mx-auto sm:hidden flex ">
+              Front-End Developer <br/> Web Designer
             </p>
           </div>
           <div className="bg-[#F5F5F5] px-4 w-fit mx-auto rounded-full flex py-2 mb-12 gap-x-2">
