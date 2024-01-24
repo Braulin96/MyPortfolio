@@ -89,7 +89,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" fixed flex sm:right-20 right-5 w-full">
+    <div className=" fixed flex sm:right-20 right-5 w-full z-30">
       <div className="w-full flex max-w-7xl mx-auto">
         <div className=" h-full flex flex-col ml-auto">
           {windowWidth <= 640 ? (
