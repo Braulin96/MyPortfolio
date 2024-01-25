@@ -1,6 +1,8 @@
 import HeroSection from "components/HeroSection";
 import Navbar from "components/Navbar";
 import AboutMe from "components/AboutMe";
+import MyProjects from "components/MyProjects";
+import ProjectsList from "components/ProjectsList";
 
 
 function App() {
@@ -9,6 +11,8 @@ function App() {
       <Navbar/>
       <HeroSection/>
       <AboutMe/>
+      <MyProjects/>
+      <ProjectsList/>
     </div>
   );
 }
