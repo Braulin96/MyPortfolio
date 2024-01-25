@@ -3,6 +3,12 @@ import LaptopTWD from "assets/images/laptopTWD.png";
 import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
 import { GoArrowUpRight } from "react-icons/go";
 
+const TWDImages = [
+  { id: 1, src: SecondLaptop, alt: "Laptop version TWD" },
+  { id: 2, src: LaptopTWD, alt: "Laptop version TWD" },
+  { id: 3, src: SecondLaptop, alt: "Laptop version TWD" },
+];
+
 const ProjectData = ({
   number,
   projectName,
@@ -77,37 +83,20 @@ const ProjectsList = () => {
             liveLink="https://www.abola.pt/"
             gitHub="https://sureshmurali.github.io/"
           />
-
           <div className="flex flex-col my-auto gap-y-20">
-            <div
-              className="flex h-full flex-col my-auto items-center justify-center
-               "
-              style={{ height: "100vh" }}
-            >
-              <img
-                className=" animate-fade-left animate-duration-1000 animate-delay-1000"
-                src={SecondLaptop}
-                alt="Laptop version TWD"
-              />
-            </div>
-            <div
-              className="flex h-full flex-col my-auto items-center justify-center"
-              style={{ height: "100vh" }}
-            >
-              <img className="" src={SecondLaptop} alt="Laptop version TWD" />
-            </div>
-            <div
-              className="flex h-full flex-col my-auto items-center justify-center"
-              style={{ height: "100vh" }}
-            >
-              <img className="" src={LaptopTWD} alt="Laptop version TWD" />
-            </div>
-            <div
-              className="flex h-full flex-col my-auto items-center justify-center"
-              style={{ height: "100vh" }}
-            >
-              <img className="" src={LaptopTWD} alt="Laptop version TWD" />
-            </div>
+            {TWDImages.map((image) => (
+              <div
+                key={image.id}
+                className="flex h-full flex-col my-auto items-center justify-center"
+                style={{ height: "100vh" }}
+              >
+                <img
+                  className="animate-fade-left animate-duration-1000 animate-delay-1000"
+                  src={image.src}
+                  alt={image.alt}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
