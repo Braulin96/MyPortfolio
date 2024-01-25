@@ -3,16 +3,15 @@ import LaptopTWD from "assets/images/laptopTWD.png";
 
 const ProjectsList = () => {
   return (
-    <div style={{ height: "100vh", overflowY: "auto" }}>
-      <div className="max-w-7xl  flex items-center mx-auto bg-gray-900">
-        <div className="flex bg-green-600">
+    <div >
+      <div className="max-w-7xl  flex items-center mx-auto ">
+        <div className="flex bg-blue-500 h-full ">
           <div
-            className="flex flex-col gap-y-20 bg-red-500 sticky top-0"
+            className="flex flex-col gap-y-20  bg-red-500 h-full"
             style={{
-              //position: "sticky",
-              //top: 0,
-
-              height: "100vh",
+              position: "sticky",
+              top: 0,
+              height: "100Vh",
               //height: "100vh", // Adjust the height accordingly
               //maxHeight: "calc(100vh - 40px)", // Set a maximum height if needed
               overflowY: "auto",
@@ -34,7 +33,7 @@ const ProjectsList = () => {
             </div>
           </div>
 
-          <div className="flex flex-col  bg-blue-500 my-auto gap-y-20">
+          <div className="flex flex-col   my-auto gap-y-20">
             <div
               className="flex h-full flex-col my-auto items-center justify-center"
               style={{ height: "100vh" }}
