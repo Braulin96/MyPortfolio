@@ -2,9 +2,59 @@ import { useState, useEffect } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 
+const DesktopNavbar = () => {
+  const [hideNavbar, setHideNavbar] = useState(false); //state to control show or hide the Navbar
+  const [prevScrollY, setPrevScrollY] = useState(0); //state to control the scrolling y position
+  
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    // Determine the scrolling direction
+    const isScrollingDown = currentScrollY > prevScrollY;
+
+    // Check the scroll position and update hideNavbar accordingly
+    if (currentScrollY > 100) {
+      setHideNavbar(isScrollingDown);
+    } else {
+      setHideNavbar(false);
+    }
+
+    // Update the previous scroll position
+    setPrevScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollY]); // Include prevScrollY in the dependency array
+
+  //Styles to set the position for the current Navbar
+  const hideNavbarStyle = {
+    width: "100%",
+    transform: hideNavbar ? "translate(0px, -100px)" : "translate(0px, 0px)",
+    transition: "transform 0.4s ease-in-out",
+  };
+  return (
+    <div
+      className="flex text-[#4F5853] justify-end h-12 my-auto transition-all duration-1000 ease-in-out bg-white"
+      style={hideNavbarStyle}
+    >
+      <ul className="my-auto flex gap-x-16 mt-4">
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Skills</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+  );
+};
+
 const Navbar = () => {
   const [showNavIcon, setShowNavIcon] = useState(true); // to change the NavIcon to VerticalNav
-  const [hideNavbar, setHideNavbar] = useState(true); // to hide the Horizontal nav and show de NavIcon when scrolling
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   // useEffect to update the window size
@@ -19,40 +69,6 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  // useEffect to update the scroll y value
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-
-      if (scrollY > 100) {
-        setHideNavbar(false);
-      } else {
-        setHideNavbar(true);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const HorizontalNavList = () => {
-    return (
-      <div className="flex text-[#4F5853] justify-end h-12 my-auto transform transition-translate mt-4 animate-delay-50 animate-duration-1000 animate-once animate-fade-left">
-        <ul className="my-auto flex gap-x-16">
-          <li>Home</li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contact</li>
-        </ul>
-      </div>
-    );
-  };
 
   const VerticalNavList = () => {
     return (
@@ -98,12 +114,8 @@ const Navbar = () => {
             ) : (
               <VerticalNavList />
             )
-          ) : hideNavbar ? (
-            <HorizontalNavList />
-          ) : showNavIcon ? (
-            <NavIcon />
           ) : (
-            <VerticalNavList />
+            <DesktopNavbar />
           )}
         </div>
       </div>
