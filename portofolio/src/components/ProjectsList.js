@@ -9,7 +9,7 @@ const TWDImages = [
   { id: 3, src: SecondLaptop, alt: "Laptop version TWD" },
 ];
 
-const ProjectData = ({
+const ModuleProject = ({
   number,
   projectName,
   rule,
@@ -74,7 +74,7 @@ const ProjectsList = () => {
     <div>
       <div className="max-w-7xl  flex items-center mx-auto ">
         <div className="flex bg-white h-full gap-x-12">
-          <ProjectData
+          <ModuleProject
             number="01"
             projectName="Dashboard TWD"
             rule="Front-End Developer"
