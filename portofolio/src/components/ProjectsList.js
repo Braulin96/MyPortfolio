@@ -32,9 +32,10 @@ const SlideCarousel = () => {
   const swiperRef = useRef();
 
   return (
-    <>
+    <div className="relative bg-green-300">
       <Swiper
-        slidesPerView={3}
+        className="sm:w-[600px] w-[300px] flex justify-center items-center"
+        slidesPerView={2}
         loop={true}
         centeredSlides={true}
         spaceBetween={5}
@@ -87,15 +88,21 @@ const SlideCarousel = () => {
           />
         </SwiperSlide>
       </Swiper>
-      <div className="flex justify-center mt-4 gap-x-12">
-        <button onClick={() => swiperRef.current?.slidePrev()}>
+      <div className="z-50 absolute top-1/2  transform -translate-y-1/2 bg-red-500 rounded-full">
+        <button className="" onClick={() => swiperRef.current?.slidePrev()}>
+          <HiArrowLongLeft className="opacity-60" size={50} />
+        </button>
+      </div>
+      
+      {/* <div className="flex justify-center mt-4 gap-x-12">
+        <button className="" onClick={() => swiperRef.current?.slidePrev()}>
           <HiArrowLongLeft className="opacity-60" size={50} />
         </button>
         <button onClick={() => swiperRef.current?.slideNext()}>
           <HiArrowLongRight className="opacity-60 hover:opacity-80" size={50} />
         </button>
-      </div>
-    </>
+      </div> */}
+    </div>
   );
 };
 
@@ -131,8 +138,8 @@ const ModuleProject = ({
           </div>
           <p className="ml-4 mt-4 text-xl">{description}</p>
 
-          <div className="">
-            Here goes the carousel
+          <div className="md:hidden flex justify-center">
+            <SlideCarousel />
           </div>
 
           <div className="bg-[#F5F5F5] px-4 w-fit mt-12 rounded-full flex py-2 mb-12 gap-x-2">
