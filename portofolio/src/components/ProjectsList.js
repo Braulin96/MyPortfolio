@@ -19,9 +19,9 @@ const ModuleProject = ({
 }) => {
   return (
     <div
-      className="flex flex-col gap-y-20  bg-white h-full"
+      className="flex flex-col gap-y-20 md:sticky bg-white h-full"
       style={{
-        position: "sticky",
+        //position: "sticky",
         top: 0,
         height: "100Vh",
         //height: "100vh", // Adjust the height accordingly
@@ -40,6 +40,11 @@ const ModuleProject = ({
             <p className="text-3xl my-auto">{rule}</p>
           </div>
           <p className="ml-4 mt-4 text-xl">{description}</p>
+
+          <div className="ml-4 mt-8 flex md:hidden bg-red-500 text-white">
+            Here goes the carousel
+
+          </div>
 
           <div className="bg-[#F5F5F5] px-4 w-fit mt-12 rounded-full flex py-2 mb-12 gap-x-2">
             <a className="text-white mx-auto hover:bg-opacity-90 font-semibold w-fit bg-[#68736C] rounded-full px-6 py-1.5 flex gap-x-1">
@@ -72,7 +77,7 @@ const ModuleProject = ({
 const ProjectsList = () => {
   return (
     <div>
-      <div className="max-w-7xl  flex items-center mx-auto ">
+      <div className="max-w-7xl  flex items-center mx-auto px-4">
         <div className="flex bg-white h-full gap-x-12">
           <ModuleProject
             number="01"
@@ -83,7 +88,7 @@ const ProjectsList = () => {
             liveLink="https://www.abola.pt/"
             gitHub="https://sureshmurali.github.io/"
           />
-          <div className="flex flex-col my-auto gap-y-20">
+          <div className="md:flex flex-col hidden my-auto gap-y-20">
             {TWDImages.map((image) => (
               <div
                 key={image.id}
