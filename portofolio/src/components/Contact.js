@@ -1,3 +1,4 @@
+//Note : Icon:
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";

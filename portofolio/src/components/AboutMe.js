@@ -1,4 +1,3 @@
-
 const AboutMe = () => {
   return (
     <div style={{ height: "100vh" }}>
