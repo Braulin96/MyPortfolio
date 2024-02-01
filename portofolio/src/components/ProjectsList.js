@@ -3,11 +3,101 @@ import LaptopTWD from "assets/images/laptopTWD.png";
 import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
 import { GoArrowUpRight } from "react-icons/go";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef } from "react";
+import { HiArrowLongLeft } from "react-icons/hi2";
+import { HiArrowLongRight } from "react-icons/hi2";
+import {
+  Navigation,
+  Autoplay,
+  Pagination,
+  Scrollbar,
+  A11y,
+  EffectCards,
+  EffectCoverflow,
+  EffectCube,
+  EffectFade,
+} from "swiper/modules";
+import "swiper/css/bundle";
+import "swiper/css/effect-cube";
+import "swiper/css/navigation";
+
 const TWDImages = [
   { id: 1, src: SecondLaptop, alt: "Laptop version TWD" },
   { id: 2, src: LaptopTWD, alt: "Laptop version TWD" },
   { id: 3, src: SecondLaptop, alt: "Laptop version TWD" },
 ];
+
+const SlideCarousel = () => {
+  const swiperRef = useRef();
+
+  return (
+    <>
+      <Swiper
+        slidesPerView={3}
+        loop={true}
+        centeredSlides={true}
+        spaceBetween={5}
+        effect={"coverflow"}
+        grabCursor={true}
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 20,
+          shadowScale: 0.94,
+        }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[
+          EffectCube,
+          Pagination,
+          EffectCoverflow,
+          Autoplay,
+          Navigation,
+          Scrollbar,
+        ]}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
+      >
+        <SwiperSlide>
+          <img
+            width={400}
+            src="https://swiperjs.com/demos/images/nature-1.jpg"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            width={400}
+            src="https://swiperjs.com/demos/images/nature-2.jpg"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            width={400}
+            src="https://swiperjs.com/demos/images/nature-3.jpg"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img
+            width={400}
+            src="https://swiperjs.com/demos/images/nature-4.jpg"
+          />
+        </SwiperSlide>
+      </Swiper>
+      <div className="flex justify-center mt-4 gap-x-12">
+        <button onClick={() => swiperRef.current?.slidePrev()}>
+          <HiArrowLongLeft className="opacity-60" size={50} />
+        </button>
+        <button onClick={() => swiperRef.current?.slideNext()}>
+          <HiArrowLongRight className="opacity-60 hover:opacity-80" size={50} />
+        </button>
+      </div>
+    </>
+  );
+};
 
 const ModuleProject = ({
   number,
@@ -41,9 +131,8 @@ const ModuleProject = ({
           </div>
           <p className="ml-4 mt-4 text-xl">{description}</p>
 
-          <div className="ml-4 mt-8 flex md:hidden bg-red-500 text-white">
+          <div className="">
             Here goes the carousel
-
           </div>
 
           <div className="bg-[#F5F5F5] px-4 w-fit mt-12 rounded-full flex py-2 mb-12 gap-x-2">
