@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef } from "react";
 import { HiArrowLongLeft } from "react-icons/hi2";
 import { HiArrowLongRight } from "react-icons/hi2";
+import { HiArrowSmallLeft } from "react-icons/hi2";
+import { HiArrowRight } from "react-icons/hi2";
 import {
   Navigation,
   Autoplay,
@@ -32,7 +34,7 @@ const SlideCarousel = () => {
   const swiperRef = useRef();
 
   return (
-    <div className="relative bg-green-300">
+    <div className="relative">
       <Swiper
         className="sm:w-[600px] w-[300px] flex justify-center items-center"
         slidesPerView={2}
@@ -88,9 +90,14 @@ const SlideCarousel = () => {
           />
         </SwiperSlide>
       </Swiper>
-      <div className="z-50 absolute top-1/2  transform -translate-y-1/2 bg-red-500 rounded-full">
-        <button className="" onClick={() => swiperRef.current?.slidePrev()}>
-          <HiArrowLongLeft className="opacity-60" size={50} />
+      <div className="z-50 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
+        <button className="bg-white shadow-lg border rounded-full p-1" onClick={() => swiperRef.current?.slidePrev()}>
+          <HiArrowSmallLeft className="opacity-70 hover:opacity-100" size={20} />
+        </button>
+      </div>
+      <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
+        <button className="bg-white shadow-lg border rounded-full p-1" onClick={() => swiperRef.current?.slideNext()}>
+          <HiArrowRight className="opacity-70 hover:opacity-100" size={20} />
         </button>
       </div>
       
@@ -173,7 +180,7 @@ const ModuleProject = ({
 const ProjectsList = () => {
   return (
     <div>
-      <div className="max-w-7xl  flex items-center mx-auto px-4">
+      <div className="max-w-7xl flex items-center mx-auto px-4">
         <div className="flex bg-white h-full gap-x-12">
           <ModuleProject
             number="01"
