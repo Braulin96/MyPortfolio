@@ -5,6 +5,7 @@ import MyProjects from "components/MyProjects";
 import ProjectsList from "components/ProjectsList";
 import Skills from "components/Skills";
 import Progress from "components/Progress";
+import Contact from "components/Contact";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <ProjectsList/>
       <Skills/>
       <Progress/>
+      <Contact/>
     </div>
   );
 }
