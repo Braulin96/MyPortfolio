@@ -3,24 +3,6 @@ import LaptopTWD from "assets/images/laptopTWD.png";
 import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
 import { GoArrowUpRight } from "react-icons/go";
 
-import {
-  Navigation,
-  Pagination,
-  Scrollbar,
-  A11y,
-  Autoplay,
-  Mousewheel,
-  Parallax,
-} from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/autoplay";
-
 const TWDImages = [
   { id: 1, src: SecondLaptop, alt: "Laptop version TWD" },
   { id: 2, src: LaptopTWD, alt: "Laptop version TWD" },
@@ -83,41 +65,6 @@ const ModuleProject = ({
         </div>
         <p className="text-xl underline">React App</p>
       </div>
-    </div>
-  );
-};
-
-const SwiperProject = () => {
-  return (
-    <div className="py-20">
-      <Swiper
-        // install Swiper modules
-        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        //spaceBetween={50}
-        slidesPerView={2}
-        navigation
-        Mousewheel={true}
-        Autoplay={{ delay: 3000 }} // Adjust delay as needed
-        Parallax={true}
-        //Scrollbar="true"
-        //pagination={{ clickable: true }}
-        //scrollbar={{ draggable: true }}
-      >
-        <SwiperSlide>
-          <div className="bg-blue-500 rounded-xl p-20 text-center">Slide 1</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-red-500 rounded-xl p-20 text-center">Slide 2</div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-green-500 rounded-xl p-20 text-center">
-            Slide 3
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="bg-gray-500 rounded-xl p-20 text-center">Slide 4</div>
-        </SwiperSlide>
-      </Swiper>
     </div>
   );
 };
