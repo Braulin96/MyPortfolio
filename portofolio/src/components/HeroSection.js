@@ -21,11 +21,11 @@ const HeroSection = () => {
             </p>
           </div>
           <div className="bg-[#F5F5F5] px-4 w-fit mx-auto rounded-full flex py-2 mb-12 gap-x-2">
-            <button className="text-white mx-auto hover:bg-opacity-90 font-semibold w-fit bg-[#68736C] rounded-full px-6 py-1.5 flex gap-x-1">
+            <button className="text-white mx-auto hover:bg-opacity-90 font-semibold w-fit bg-[#68736C] rounded-full px-6 py-1.5 flex gap-x-1 text-lg">
               <p>Resume</p>
               <GoArrowUpRight size={20} className="my-auto" />
             </button>
-            <button className="my-auto px-2 text-[#5E6460] font-semibold hover:opacity-90">
+            <button className="my-auto px-2 text-[#5E6460] font-semibold hover:opacity-90 text-lg">
               Let's Talk
             </button>
           </div>
