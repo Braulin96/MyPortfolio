@@ -32,11 +32,10 @@ const TWDImages = [
 
 const SlideCarousel = () => {
   const swiperRef = useRef();
-
   return (
-    <div className="relative">
+    <div className="relative"style={{maxWidth:"calc(100w - 10px)", width:'calc(100vw - 2rem)'}}>
       <Swiper
-        className="sm:w-[600px] w-[300px] flex justify-center items-center"
+        className="justify-center items-center mx-auto"
         slidesPerView={2}
         loop={true}
         centeredSlides={true}
@@ -134,7 +133,7 @@ const ModuleProject = ({
       }}
     >
       <div className="my-auto text-[#4F5853] font-light">
-        <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square flex items-center">
+        <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center">
           <p className="mx-auto text-lg">{number}</p>
         </div>
         <div className="flex flex-col ml-4 py-28">
@@ -145,8 +144,9 @@ const ModuleProject = ({
           </div>
           <p className="ml-4 mt-4 text-xl">{description}</p>
 
-          <div className="md:hidden flex justify-center">
+          <div className="md:hidden flex justify-center py-12 overflow-hidden">
             <SlideCarousel />
+           
           </div>
 
           <div className="bg-[#F5F5F5] px-4 w-fit mt-12 rounded-full flex py-2 mb-12 gap-x-2">
