@@ -35,7 +35,7 @@ const SlideCarousel = () => {
   return (
     <div className="relative"style={{maxWidth:"calc(100w - 10px)", width:'calc(100vw - 2rem)'}}>
       <Swiper
-        className="justify-center items-center mx-auto"
+        className="flex w-full justify-center items-center mx-auto"
         slidesPerView={2}
         loop={true}
         centeredSlides={true}
@@ -136,7 +136,7 @@ const ModuleProject = ({
         <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center">
           <p className="mx-auto text-lg">{number}</p>
         </div>
-        <div className="flex flex-col ml-4 py-28">
+        <div className="flex flex-col  py-28">
           <p className="text-5xl ml-4">{projectName}</p>
           <div className="flex mt-12">
             <BsDot className="my-auto" size={30} color="#9EABA2" />
