@@ -66,14 +66,17 @@ const SlideCarousel = () => {
       >
         <SwiperSlide>
           <img
+          className="h-full"
             width={400}
             src="https://swiperjs.com/demos/images/nature-1.jpg"
           />
         </SwiperSlide>
-        <SwiperSlide>
+        <SwiperSlide className="my-auto">
           <img
+          className="h-full my-auto"
+          height={400}
             width={400}
-            src="https://swiperjs.com/demos/images/nature-2.jpg"
+            src={LaptopTWD}
           />
         </SwiperSlide>
         <SwiperSlide>
