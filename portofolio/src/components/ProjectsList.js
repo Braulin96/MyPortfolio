@@ -102,15 +102,6 @@ const SlideCarousel = () => {
           <HiArrowRight className="opacity-70 hover:opacity-100" size={20} />
         </button>
       </div>
-      
-      {/* <div className="flex justify-center mt-4 gap-x-12">
-        <button className="" onClick={() => swiperRef.current?.slidePrev()}>
-          <HiArrowLongLeft className="opacity-60" size={50} />
-        </button>
-        <button onClick={() => swiperRef.current?.slideNext()}>
-          <HiArrowLongRight className="opacity-60 hover:opacity-80" size={50} />
-        </button>
-      </div> */}
     </div>
   );
 };
@@ -124,15 +115,13 @@ const ModuleProject = ({
   gitHub,
 }) => {
   return (
+    <div className="max-w-7xl flex items-center mx-auto px-4">
+    <div className="flex bg-white h-full gap-x-12">
+    
     <div
       className="flex flex-col gap-y-20 md:sticky bg-white md:h-[100vh]"
       style={{
-        //position: "sticky",
         top: 0,
-        //height: "100Vh",
-      //height: "100vh", // Adjust the height accordingly
-        //maxHeight: "calc(100vh - 40px)", // Set a maximum height if needed
-        //overflowY: "auto",
       }}
     >
       <div className="my-auto text-[#4F5853] font-light">
@@ -178,24 +167,8 @@ const ModuleProject = ({
         <p className="text-xl underline md:flex hidden">React App</p>
       </div>
     </div>
-  );
-};
 
-const ProjectsList = () => {
-  return (
-    <div>
-      <div className="max-w-7xl flex items-center mx-auto px-4">
-        <div className="flex bg-white h-full gap-x-12">
-          <ModuleProject
-            number="01"
-            projectName="Dashboard TWD"
-            rule="Front-End Developer"
-            description="Multi-brand e-commerce design system for websites and native
-                  mobile applications."
-            liveLink="https://www.abola.pt/"
-            gitHub="https://sureshmurali.github.io/"
-          />
-          <div className="md:flex flex-col hidden my-auto gap-y-20">
+    <div className="md:flex flex-col hidden my-auto gap-y-20">
             {TWDImages.map((image) => (
               <div
                 key={image.id}
@@ -210,8 +183,30 @@ const ProjectsList = () => {
               </div>
             ))}
           </div>
-        </div>
-      </div>
+
+
+    </div>
+    </div>
+  );
+};
+
+const ProjectsList = () => {
+  return (
+    <div>
+      
+          
+          <ModuleProject
+            number="01"
+            projectName="Dashboard TWD"
+            rule="Front-End Developer"
+            description="Multi-brand e-commerce design system for websites and native
+                  mobile applications."
+            liveLink="https://www.abola.pt/"
+            gitHub="https://sureshmurali.github.io/"
+          />
+
+          
+     
       {/* <SwiperProject /> */}
     </div>
   );
