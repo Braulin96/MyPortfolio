@@ -33,7 +33,7 @@ const TWDImages = [
 const SlideCarousel = () => {
   const swiperRef = useRef();
   return (
-    <div className="relative"style={{maxWidth:"calc(100w - 10px)", width:'calc(100vw - 2rem)'}}>
+    <div className="relative  animate-once animate-fade-left animate-duration-[2s]"style={{maxWidth:"calc(100w - 10px)", width:'calc(100vw - 2rem)'}}>
       <Swiper
         className="flex w-full justify-center items-center mx-auto"
         slidesPerView={2}
@@ -122,21 +122,21 @@ const ModuleProject = ({
 }) => {
   return (
     <div
-      className="flex flex-col gap-y-20 md:sticky bg-white h-full"
+      className="flex flex-col gap-y-20 md:sticky bg-white md:h-[100vh]"
       style={{
         //position: "sticky",
         top: 0,
-        height: "100Vh",
-        //height: "100vh", // Adjust the height accordingly
+        //height: "100Vh",
+      //height: "100vh", // Adjust the height accordingly
         //maxHeight: "calc(100vh - 40px)", // Set a maximum height if needed
-        overflowY: "auto",
+        //overflowY: "auto",
       }}
     >
       <div className="my-auto text-[#4F5853] font-light">
         <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center">
           <p className="mx-auto text-lg">{number}</p>
         </div>
-        <div className="flex flex-col  py-28">
+        <div className="flex flex-col md:py-28 py-0">
           <p className="text-5xl ml-4">{projectName}</p>
           <div className="flex mt-12">
             <BsDot className="my-auto" size={30} color="#9EABA2" />
@@ -144,12 +144,13 @@ const ModuleProject = ({
           </div>
           <p className="ml-4 mt-4 text-xl">{description}</p>
 
-          <div className="md:hidden flex justify-center py-12 overflow-hidden">
+          <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
             <SlideCarousel />
+            <p className="text-sm mt-8 underline flex md:hidden">React App</p>
            
           </div>
 
-          <div className="bg-[#F5F5F5] px-4 w-fit mt-12 rounded-full flex py-2 mb-12 gap-x-2">
+          <div className="bg-[#F5F5F5] px-4 w-fit md:mt-12 mt-6 rounded-full flex py-2 mb-12 gap-x-2 md:mx-0 mx-auto">
             <a className="text-white mx-auto hover:bg-opacity-90 font-semibold w-fit bg-[#68736C] rounded-full px-6 py-1.5 flex gap-x-1">
               <a
                 href={liveLink}
@@ -171,7 +172,7 @@ const ModuleProject = ({
             </a>
           </div>
         </div>
-        <p className="text-xl underline">React App</p>
+        <p className="text-xl underline md:flex hidden">React App</p>
       </div>
     </div>
   );
