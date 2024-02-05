@@ -1,28 +1,28 @@
-import { BsDot } from "react-icons/bs";
-import LaptopTWD from "assets/images/laptopTWD.png";
-import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
-import { GoArrowUpRight } from "react-icons/go";
-
-import { Swiper, SwiperSlide } from "swiper/react";
+//Note: hooks:
 import { useRef } from "react";
-import { HiArrowLongLeft } from "react-icons/hi2";
-import { HiArrowLongRight } from "react-icons/hi2";
-import { HiArrowSmallLeft } from "react-icons/hi2";
-import { HiArrowRight } from "react-icons/hi2";
+//Note: components:
+import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Navigation,
   Autoplay,
   Pagination,
   Scrollbar,
-  A11y,
-  EffectCards,
   EffectCoverflow,
   EffectCube,
-  EffectFade,
 } from "swiper/modules";
 import "swiper/css/bundle";
 import "swiper/css/effect-cube";
 import "swiper/css/navigation";
+
+//Note:images/icons:
+import { BsDot } from "react-icons/bs";
+import LaptopTWD from "assets/images/laptopTWD.png";
+import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
+import { GoArrowUpRight } from "react-icons/go";
+import { HiArrowSmallLeft } from "react-icons/hi2";
+import { HiArrowRight } from "react-icons/hi2";
+
+
 
 const TWDImages = [
   { id: 1, src: SecondLaptop, alt: "Laptop version TWD" },
@@ -39,7 +39,6 @@ const SlideCarousel = () => {
     >
       <Swiper
         className="flex w-full px-20 relative justify-center items-center mx-auto"
-        //style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
         slidesPerView={"auto"}
         loop={true}
         centeredSlides={true}
@@ -72,7 +71,7 @@ const SlideCarousel = () => {
         {TWDImages.map((image) => (
           <SwiperSlide className="mx-auto w-full flex mb-4" key={image.id}>
             <img
-              className="h-full mx-auto"
+              className="h-full mx-auto mb-4"
               //width={400}
               src={image.src}
               alt={image.alt}
@@ -82,7 +81,7 @@ const SlideCarousel = () => {
       </Swiper>
       <div className="z-50 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
           <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1"
+            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
             onClick={() => swiperRef.current?.slidePrev()}
           >
             <HiArrowSmallLeft color="White" 
@@ -91,10 +90,9 @@ const SlideCarousel = () => {
             />
           </button>
         </div>
-
         <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
           <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1"
+            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
             onClick={() => swiperRef.current?.slideNext()}
           >
             <HiArrowRight color="White" className="opacity-70 hover:opacity-100" size={20} />
