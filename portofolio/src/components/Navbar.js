@@ -54,35 +54,44 @@ const DesktopNavbar = () => {
 
 const MobileNavbar = () => {
   const [showNavIcon, setShowNavIcon] = useState(true); // to change the NavIcon to VerticalNav
+  //to control the position of Navbar (hide or show using translate)
+  const hideMobileNavbar = {
+    width: "100%",
+    transform: showNavIcon ? "translate(0px, -1000px)" : "translate(0px, 0px)",
+    transition: "transform 0.8s ease-in-out",
+  };
+
   return (
     <>
-      {showNavIcon ? (
-        <div className="my-auto justify-end flex flex-col gap-y-4 h-12 mt-4 animate-delay-50 animate-once animate-fade-left mr-4">
-          <button
-            onClick={() => setShowNavIcon(false)}
-            className="bg-[#68736C] flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out"
-          >
-            <RxHamburgerMenu color="white" size={24} />
-          </button>
-        </div>
-      ) : (
-        <div
-          className="flex flex-col bg-[#4f5853] text-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full
-    animate-delay-100 animate-duration-1000 animate-once animate-flip-down"
+      <div
+        className={`${
+          showNavIcon ? "flex" : "hidden"
+        } my-auto justify-end flex-col gap-y-4 h-12 mt-4 animate-delay-300 animate-once animate-fade-up mr-4`}
+      >
+        <button
+          onClick={() => setShowNavIcon(false)}
+          className="bg-[#68736C] flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out"
         >
-          <button onClick={() => setShowNavIcon(true)}>
-            <IoCloseSharp size={30} className="ml-auto mt-3 mr-3" />
-          </button>
+          <RxHamburgerMenu color="white" size={24} />
+        </button>
+      </div>
 
-          <ul className="my-auto flex flex-col gap-10 mx-auto text-center">
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
-            <li>Skills</li>
-            <li>Contact</li>
-          </ul>
-        </div>
-      )}
+      <div
+        style={hideMobileNavbar}
+        className="flex flex-col bg-[#4f5853] text-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
+      >
+        <button onClick={() => setShowNavIcon(true)}>
+          <IoCloseSharp size={30} className="ml-auto mt-3 mr-3" />
+        </button>
+
+        <ul className="my-auto flex flex-col gap-10 mx-auto text-center">
+          <li onClick={() => setShowNavIcon(true)}>Home</li>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Skills</li>
+          <li>Contact</li>
+        </ul>
+      </div>
     </>
   );
 };
