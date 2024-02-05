@@ -43,8 +43,7 @@ const Progress = () => {
           <div className="order-last md:order-first md:w-auto w-full">
             <Repeat />
           </div>
-
-          <p className="lg:text-8xl text-6xl font-semibold text-[#BDD1C5] opacity-50 lg:leading-tight leading-none lg:-ml-28 md:-ml-16">
+          <p className="lg:text-8xl md:text-7xl text-6xl font-semibold text-[#BDD1C5] opacity-50 lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
           </p>
         </div>
