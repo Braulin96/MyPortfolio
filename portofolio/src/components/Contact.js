@@ -6,7 +6,7 @@ import { AiFillInstagram } from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", maxHeight:'1000px'}}>
     <div className="max-w-7xl h-full flex items-center justify-center mx-auto px-4 bg-gradient-to-b from-white via-white to-[#e1eae4]"
       >
       <div className="flex flex-col items-center justify-center mx-auto px-4 gap-y-4 lg:gap-x-8 w-full">

@@ -1,6 +1,6 @@
 const Skills = () => {
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", maxHeight:'1000px'}}>
       <div className="max-w-7xl h-full flex mx-auto">
         <div className="lg:flex items-center w-full px-4 justify-center my-auto">
           <p className="sm:text-8xl text-6xl font-semibold text-[#BDD1C5] opacity-50">

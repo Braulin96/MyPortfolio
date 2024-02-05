@@ -37,7 +37,7 @@ const Repeat = () => {
 
 const Progress = () => {
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", maxHeight:'1000px'}}>
       <div className="max-w-7xl h-full flex mx-auto">
         <div className="flex md:flex-row flex-col items-center w-full px-4 justify-center gap-y-12">
           <div className="order-last md:order-first md:w-auto w-full">
