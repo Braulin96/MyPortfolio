@@ -38,7 +38,7 @@ const DesktopNavbar = () => {
   };
   return (
     <div
-      className="flex text-[#4F5853] justify-end h-12 my-auto bg-white"
+      className="flex text-[#4F5853] justify-end h-12 my-auto bg-white animate-delay-300 animate-once animate-fade-left "
       style={hideDesktopNavbar}
     >
       <ul className="my-auto flex gap-x-16 mt-4 mr-4">
@@ -66,7 +66,7 @@ const MobileNavbar = () => {
       <div
         className={`${
           showNavIcon ? "flex" : "hidden"
-        } my-auto justify-end flex-col gap-y-4 h-12 mt-4 animate-delay-300 animate-once animate-fade-up mr-4`}
+        } my-auto justify-end flex-col gap-y-4 h-12 mt-4 animate-delay-300 animate-once animate-fade-left mr-4`}
       >
         <button
           onClick={() => setShowNavIcon(false)}
