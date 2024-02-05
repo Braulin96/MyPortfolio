@@ -34,12 +34,13 @@ const SlideCarousel = () => {
   const swiperRef = useRef();
   return (
     <div
-      className="animate-once animate-fade-left animate-duration-[2s]"
+      className="animate-once animate-fade-left animate-duration-[2s] w-fit"
       style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
     >
       <Swiper
-        className="flex w-full relative justify-center items-center mx-auto"
-        slidesPerView={'auto'}
+        className="flex w-full px-20 relative justify-center items-center mx-auto"
+        //style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
+        slidesPerView={"auto"}
         loop={true}
         centeredSlides={true}
         spaceBetween={5}
@@ -49,11 +50,11 @@ const SlideCarousel = () => {
           shadow: true,
           slideShadows: false,
           shadowOffset: 20,
-          shadowScale: 0.7,   
+          shadowScale: 0.7,
         }}
         autoplay={{
           delay: 2500,
-          disableOnInteraction: false
+          disableOnInteraction: false,
         }}
         speed={800}
         modules={[
@@ -69,36 +70,36 @@ const SlideCarousel = () => {
         }}
       >
         {TWDImages.map((image) => (
-          <SwiperSlide className="mx-auto w-full flex" key={image.id}>
+          <SwiperSlide className="mx-auto w-full flex mb-4" key={image.id}>
             <img
               className="h-full mx-auto"
-              width={400}
+              //width={400}
               src={image.src}
               alt={image.alt}
             />
           </SwiperSlide>
         ))}
-        <div className="z-50 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
-        <button
-          className="bg-white shadow-lg border rounded-full p-1"
-          onClick={() => swiperRef.current?.slidePrev()}
-        >
-          <HiArrowSmallLeft
-            className="opacity-70 hover:opacity-100"
-            size={20}
-          />
-        </button>
-      </div>
       </Swiper>
-      
-      <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
-        <button
-          className="bg-white shadow-lg border rounded-full p-1"
-          onClick={() => swiperRef.current?.slideNext()}
-        >
-          <HiArrowRight className="opacity-70 hover:opacity-100" size={20} />
-        </button>
-      </div>
+      <div className="z-50 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
+          <button
+            className="bg-[#68736C] shadow-lg border rounded-full p-1"
+            onClick={() => swiperRef.current?.slidePrev()}
+          >
+            <HiArrowSmallLeft color="White" 
+              className="opacity-70 hover:opacity-100"
+              size={20}
+            />
+          </button>
+        </div>
+
+        <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
+          <button
+            className="bg-[#68736C] shadow-lg border rounded-full p-1"
+            onClick={() => swiperRef.current?.slideNext()}
+          >
+            <HiArrowRight color="White" className="opacity-70 hover:opacity-100" size={20} />
+          </button>
+        </div>
     </div>
   );
 };
