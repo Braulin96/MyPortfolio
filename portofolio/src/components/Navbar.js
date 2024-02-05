@@ -41,7 +41,7 @@ const DesktopNavbar = () => {
       className="flex text-[#4F5853] justify-end h-12 my-auto bg-white"
       style={hideDesktopNavbar}
     >
-      <ul className="my-auto flex gap-x-16 mt-4">
+      <ul className="my-auto flex gap-x-16 mt-4 mr-4">
         <li>Home</li>
         <li>About</li>
         <li>Projects</li>
@@ -57,7 +57,7 @@ const MobileNavbar = () => {
   return (
     <>
       {showNavIcon ? (
-        <div className="my-auto justify-end flex flex-col gap-y-4 h-12 mt-4 animate-delay-50 animate-once animate-fade-left">
+        <div className="my-auto justify-end flex flex-col gap-y-4 h-12 mt-4 animate-delay-50 animate-once animate-fade-left mr-4">
           <button
             onClick={() => setShowNavIcon(false)}
             className="bg-[#68736C] flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out"
@@ -104,9 +104,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className=" fixed flex sm:right-20 right-5 w-full z-30">
+    <div className="fixed flex w-full z-30 mx-auto">
       <div className="w-full flex max-w-7xl mx-auto">
-        <div className=" h-full flex flex-col ml-auto">
+        <div className="h-full flex flex-col ml-auto w-full">
           {windowWidth <= 640 ? <MobileNavbar /> : <DesktopNavbar />}
         </div>
       </div>
