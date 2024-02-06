@@ -3,9 +3,9 @@ const Repeat = () => {
     <div className="bg-secondary-gray  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
       <div className="flex justify-between">
         <div className="flex space-x-1.5">
-          <div className="w-3 h-3 rounded-full bg-red-500 bg-opacity-70"></div>
-          <div className="w-3 h-3 rounded-full bg-white "></div>
-          <div className="w-3 h-3 rounded-full bg-green-500 bg-opacity-70"></div>
+          <div className="w-3 h-3 rounded-full bg-red-500"></div>
+          <div className="w-3 h-3 rounded-full bg-white"></div>
+          <div className="w-3 h-3 rounded-full bg-primary-green"></div>
         </div>
         <div>
           <p className="text-xs font-light text-white"> Motivation.txt</p>
@@ -43,7 +43,7 @@ const Progress = () => {
           <div className="order-last md:order-first md:w-auto w-full">
             <Repeat />
           </div>
-          <p className="lg:text-8xl md:text-7xl text-6xl font-semibold text-primary-green opacity-60 lg:leading-tight leading-none md:ml-8">
+          <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-primary-gray lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
           </p>
         </div>
