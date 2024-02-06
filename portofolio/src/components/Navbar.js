@@ -37,7 +37,7 @@ const DesktopNavbar = () => {
     transition: "transform 0.4s ease-in-out",
   };
   return (
-    <div className="flex justify-between" style={hideDesktopNavbar}>
+    <div className="flex justify-between mt-2" style={hideDesktopNavbar}>
       <div className="flex text-secondary-gray justify-end h-12 my-auto bg-white">
         <ul className="my-auto flex gap-x-14 mt-4 mr-4">
           <li className="border-b-2 border-primary-green text-secondary-blue">
@@ -119,7 +119,7 @@ const Navbar = () => {
   return (
     <div className="fixed flex w-full z-30 mx-auto bg-white">
       <div className="w-full flex max-w-7xl mx-auto">
-        <div className="h-full flex flex-col ml-auto w-full px-4 mt-2">
+        <div className="h-full flex flex-col ml-auto w-full px-4">
           {windowWidth <= 640 ? <MobileNavbar /> : <DesktopNavbar />}
         </div>
       </div>
