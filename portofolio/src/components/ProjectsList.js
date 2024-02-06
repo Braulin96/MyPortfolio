@@ -13,6 +13,7 @@ import {
 import "swiper/css/bundle";
 import "swiper/css/effect-cube";
 import "swiper/css/navigation";
+import TiltAnimation from "./shared/TiltAnimation";
 
 //Note:images/icons:
 import { BsDot } from "react-icons/bs";
@@ -21,8 +22,6 @@ import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi2";
-
-
 
 const TWDImages = [
   { id: 1, src: SecondLaptop, alt: "Laptop version TWD" },
@@ -80,24 +79,29 @@ const SlideCarousel = () => {
         ))}
       </Swiper>
       <div className="z-50 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
-          <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            <HiArrowSmallLeft color="White" 
-              className="opacity-70 hover:opacity-100"
-              size={20}
-            />
-          </button>
-        </div>
-        <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
-          <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            <HiArrowRight color="White" className="opacity-70 hover:opacity-100" size={20} />
-          </button>
-        </div>
+        <button
+          className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <HiArrowSmallLeft
+            color="White"
+            className="opacity-70 hover:opacity-100"
+            size={20}
+          />
+        </button>
+      </div>
+      <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
+        <button
+          className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <HiArrowRight
+            color="White"
+            className="opacity-70 hover:opacity-100"
+            size={20}
+          />
+        </button>
+      </div>
     </div>
   );
 };
@@ -171,11 +175,13 @@ const ModuleProject = ({
               className="flex h-full flex-col my-auto items-center justify-center"
               style={{ height: "100vh" }}
             >
-              <img
-                className="animate-fade-left animate-duration-1000 animate-delay-1000"
-                src={image.src}
-                alt={image.alt}
-              />
+              <TiltAnimation>
+                <img
+                  className="animate-fade-left animate-duration-1000 animate-delay-1000"
+                  src={image.src}
+                  alt={image.alt}
+                />
+              </TiltAnimation>
             </div>
           ))}
         </div>
@@ -186,7 +192,7 @@ const ModuleProject = ({
 
 const ProjectsList = () => {
   return (
-    <div >
+    <div>
       <ModuleProject
         number="01"
         projectName="Dashboard TWD"
