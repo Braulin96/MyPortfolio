@@ -38,11 +38,11 @@ const DesktopNavbar = () => {
   };
   return (
     <div
-      className="flex text-[#4F5853] justify-end h-12 my-auto bg-white"
+      className="flex text-secondary-gray justify-end h-12 my-auto bg-white"
       style={hideDesktopNavbar}
     >
       <ul className="my-auto flex gap-x-16 mt-4 mr-4">
-        <li className="border-b-2">Home</li>
+        <li className="border-b-2 border-primary-green text-secondary-blue">Home</li>
         <li>About</li>
         <li>Projects</li>
         <li>Skills</li>
@@ -70,14 +70,14 @@ const MobileNavbar = () => {
       >
         <button
           onClick={() => setShowNavIcon(false)}
-          className="bg-[#68736C] flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out"
+          className="bg-primary-green flex w-fit ml-auto p-3 rounded-full my-auto transition-all duration-300 ease-in-out shadow-2xl"
         >
           <RxHamburgerMenu color="white" size={24} />
         </button>
       </div>
       <div
         style={hideMobileNavbar}
-        className="flex flex-col bg-[#4f5853] text-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
+        className="flex flex-col bg-secondary-gray text-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
       >
         <button onClick={() => setShowNavIcon(true)}>
           <IoCloseSharp size={30} className="ml-auto mt-3 mr-3" />
