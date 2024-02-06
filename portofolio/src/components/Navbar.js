@@ -38,10 +38,8 @@ const DesktopNavbar = () => {
   };
   return (
     <div className="flex justify-between" style={hideDesktopNavbar}>
-     
-
       <div className="flex text-secondary-gray justify-end h-12 my-auto bg-white">
-        <ul className="my-auto flex gap-x-16 mt-4 mr-4">
+        <ul className="my-auto flex gap-x-14 mt-4 mr-4">
           <li className="border-b-2 border-primary-green text-secondary-blue">
             Home
           </li>
@@ -51,7 +49,9 @@ const DesktopNavbar = () => {
           <li>Contact</li>
         </ul>
       </div>
-      <a className="mt-4 ml-4 cursor-pointer border px-6 py-1.5 rounded-full border-primary-green">Git Hub</a>
+      <a className="ml-4 cursor-pointer border px-6 py-1.5 rounded-full border-primary-green my-auto">
+        Git Hub
+      </a>
     </div>
   );
 };
@@ -117,9 +117,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed flex w-full z-30 mx-auto">
+    <div className="fixed flex w-full z-30 mx-auto bg-white">
       <div className="w-full flex max-w-7xl mx-auto">
-        <div className="h-full flex flex-col ml-auto w-full">
+        <div className="h-full flex flex-col ml-auto w-full px-4 mt-2">
           {windowWidth <= 640 ? <MobileNavbar /> : <DesktopNavbar />}
         </div>
       </div>
