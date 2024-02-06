@@ -1,11 +1,11 @@
 const Repeat = () => {
   return (
-    <div className="bg-[#80898E] bg-opacity-50 mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
+    <div className="bg-secondary-gray  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
       <div className="flex justify-between">
-        <div className="flex space-x-1">
-          <div className="w-3 h-3 rounded-full bg-red-500 bg-opacity-70"></div>
-          <div className="w-3 h-3 rounded-full bg-gray-50 bg-opacity-70"></div>
-          <div className="w-3 h-3 rounded-full bg-green-500 bg-opacity-70"></div>
+        <div className="flex space-x-1.5">
+          <div className="w-3 h-3 rounded-full bg-red-500"></div>
+          <div className="w-3 h-3 rounded-full bg-white"></div>
+          <div className="w-3 h-3 rounded-full bg-primary-green"></div>
         </div>
         <div>
           <p className="text-xs font-light text-white"> Motivation.txt</p>
@@ -37,14 +37,13 @@ const Repeat = () => {
 
 const Progress = () => {
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", maxHeight:'1000px'}}>
       <div className="max-w-7xl h-full flex mx-auto">
         <div className="flex md:flex-row flex-col items-center w-full px-4 justify-center gap-y-12">
           <div className="order-last md:order-first md:w-auto w-full">
             <Repeat />
           </div>
-
-          <p className="lg:text-8xl text-6xl font-semibold text-[#BDD1C5] opacity-50 lg:leading-tight leading-none lg:-ml-28 md:-ml-16">
+          <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-primary-gray lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
           </p>
         </div>
