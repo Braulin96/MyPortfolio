@@ -119,15 +119,15 @@ const ModuleProject = ({
             top: 0,
           }}
         >
-          <div className="my-auto text-[#4F5853] font-light">
+          <div className="my-auto text-secondary-gray font-light">
             <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center">
               <p className="mx-auto text-lg">{number}</p>
             </div>
             <div className="flex flex-col md:py-28 py-0">
-              <p className="text-5xl ml-4">{projectName}</p>
+              <p className="text-5xl ml-4 ">{projectName}</p>
               <div className="flex mt-12">
                 <BsDot className="my-auto" size={30} color="#9EABA2" />
-                <p className="text-3xl my-auto">{rule}</p>
+                <p className="text-3xl my-auto ">{rule}</p>
               </div>
               <p className="ml-4 mt-4 text-xl">{description}</p>
 
@@ -139,7 +139,7 @@ const ModuleProject = ({
               </div>
 
               <div className="bg-[#F5F5F5] px-4 w-fit md:mt-12 mt-6 rounded-full flex py-2 mb-12 gap-x-2 md:mx-0 mx-auto">
-                <a className="text-white mx-auto hover:bg-opacity-90 font-semibold w-fit bg-[#68736C] rounded-full px-6 py-1.5 flex gap-x-1">
+                <a className="text-white mx-auto hover:bg-opacity-90 font-semibold w-fit bg-primary-green rounded-full px-6 py-1.5 flex gap-x-1">
                   <a
                     href={liveLink}
                     target="_blank"
@@ -154,7 +154,7 @@ const ModuleProject = ({
                   href={gitHub}
                   target="_blank"
                   rel="noopener noreferrer" // This is important for security reasons
-                  className="my-auto px-2 text-[#5E6460] font-semibold hover:opacity-90 text-lg"
+                  className="my-auto px-2 text-secondary-gray font-bold hover:opacity-90 text-lg"
                 >
                   GitHub
                 </a>
