@@ -15,11 +15,11 @@ const defaultOptions = {
   maxGlare: 2,
   glarePrerender: false,
 };
-const TiltAnimation = ({ children, className}) => {
+const TiltAnimation = ({ children, className }) => {
   return (
-    <Tilt options={defaultOptions} style={{ height: 250, width: 250 }}>
-    <div className={className}> {children}</div>
-  </Tilt>
-  )
-}
-export default TiltAnimation
+    <Tilt options={defaultOptions} >
+      {children}
+    </Tilt>
+  );
+};
+export default TiltAnimation;
