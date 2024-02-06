@@ -37,17 +37,21 @@ const DesktopNavbar = () => {
     transition: "transform 0.4s ease-in-out",
   };
   return (
-    <div
-      className="flex text-secondary-gray justify-end h-12 my-auto bg-white"
-      style={hideDesktopNavbar}
-    >
-      <ul className="my-auto flex gap-x-16 mt-4 mr-4">
-        <li className="border-b-2 border-primary-green text-secondary-blue">Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Skills</li>
-        <li>Contact</li>
-      </ul>
+    <div className="flex justify-between" style={hideDesktopNavbar}>
+     
+
+      <div className="flex text-secondary-gray justify-end h-12 my-auto bg-white">
+        <ul className="my-auto flex gap-x-16 mt-4 mr-4">
+          <li className="border-b-2 border-primary-green text-secondary-blue">
+            Home
+          </li>
+          <li>About</li>
+          <li>Projects</li>
+          <li>Skills</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <a className="mt-4 ml-4 cursor-pointer border px-6 py-1.5 rounded-full border-primary-green">Git Hub</a>
     </div>
   );
 };
