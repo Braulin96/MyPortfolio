@@ -14,6 +14,7 @@ import "swiper/css/bundle";
 import "swiper/css/effect-cube";
 import "swiper/css/navigation";
 import TiltAnimation from "./shared/TiltAnimation";
+import GsapAnimation from "./shared/GsapAnimation";
 
 //Note:images/icons:
 import { BsDot } from "react-icons/bs";
@@ -124,6 +125,7 @@ const ModuleProject = ({
           }}
         >
           <div className="my-auto text-secondary-gray font-light">
+             <GsapAnimation> 
             <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center">
               <p className="mx-auto text-lg">{number}</p>
             </div>
@@ -165,6 +167,7 @@ const ModuleProject = ({
               </div>
             </div>
             <p className="text-xl underline md:flex hidden">React App</p>
+            </GsapAnimation>
           </div>
         </div>
 
@@ -175,12 +178,16 @@ const ModuleProject = ({
               className="flex h-full flex-col my-auto items-center justify-center"
               style={{ height: "100vh" }}
             >
-              <TiltAnimation>
+               <TiltAnimation>
+             
+             
                 <img
                   className="animate-fade-left animate-duration-1000 animate-delay-1000"
                   src={image.src}
                   alt={image.alt}
                 />
+              
+            
               </TiltAnimation>
             </div>
           ))}
