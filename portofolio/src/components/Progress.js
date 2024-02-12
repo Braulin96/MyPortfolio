@@ -4,7 +4,7 @@ import TiltAnimation from "./shared/TiltAnimation";
 
 const RepeatFunction = () => {
   return (
-    <div className="bg-secondary-gray  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
+    <div className="bg-white bg-opacity-10  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
       <div className="flex justify-between">
         <div className="flex space-x-1.5">
           <div className="w-3 h-3 rounded-full bg-red-500"></div>
