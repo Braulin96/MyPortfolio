@@ -116,50 +116,37 @@ const ModuleProject = ({
 }) => {
   return (
     <div className="max-w-7xl flex items-center mx-auto px-4">
-      <div className="flex bg-white h-full gap-x-12">
+      <div className="flex h-full gap-x-12">
         <div
-          className="flex flex-col gap-y-20 md:sticky bg-white md:h-[100vh]"
+          className="flex flex-col gap-y-20 md:sticky  md:h-[100vh]"
           style={{
             top: 0,
           }}
         >
-          <div className="my-auto text-secondary-gray font-light">
-            <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center">
-              <p className="mx-auto text-lg">{number}</p>
+          <div className="my-auto text-white font-light">
+            <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
+              <p className="mx-auto text-lg text-[#17181c]">{number}</p>
             </div>
             <div className="flex flex-col md:py-28 py-0">
-              <p className="text-5xl ml-4 ">{projectName}</p>
+              <p className="text-5xl ml-4">{projectName}</p>
               <div className="flex mt-12">
                 <BsDot className="my-auto" size={30} color="#9EABA2" />
                 <p className="text-3xl my-auto ">{rule}</p>
               </div>
               <p className="ml-4 mt-4 text-xl">{description}</p>
-
               <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
                 <SlideCarousel />
                 <p className="text-sm mt-8 underline flex md:hidden">
                   React App
                 </p>
               </div>
-
-              <div className="bg-[#F5F5F5] px-4 w-fit md:mt-12 mt-6 rounded-full flex py-2 mb-12 gap-x-2 md:mx-0 mx-auto">
-                <a className="text-white mx-auto hover:bg-opacity-90 font-semibold w-fit bg-primary-green rounded-full px-6 py-1.5 flex gap-x-1">
-                  <a
-                    href={liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg"
-                  >
-                    Watch live
-                  </a>
+              <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
+                <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
+                  <p className="font-semibold text-lg">Watch live</p>
                   <GoArrowUpRight size={20} className="my-auto" />
-                </a>
-                <a
-                  href={gitHub}
-                  target="_blank"
-                  rel="noopener noreferrer" // This is important for security reasons
-                  className="my-auto px-2 text-secondary-gray font-bold hover:opacity-90 text-lg"
-                >
+                </button>
+
+                <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
                   GitHub
                 </a>
               </div>
