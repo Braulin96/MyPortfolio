@@ -1,3 +1,6 @@
+//Note: components:
+import TypeIt from "typeit-react";
+
 const Repeat = () => {
   return (
     <div className="bg-secondary-gray  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
@@ -12,21 +15,56 @@ const Repeat = () => {
         </div>
       </div>
 
-      <div className="border-t my-auto">
-        <p
-          className="mt-4 flex flex-col gap-y-1 text-lg font-semibold text-gray-100"
-          dangerouslySetInnerHTML={{
-            __html: `
-                (function repeat ()  {<br/>
-                    <span> eat ();</span>
-                    <span>code ();</span>
-                    <span>workout ();</span>
-                    <span>love_yourself();</span>
-                    <span> sleep ();</span>
-                })();
-                `,
+      <div className="border-t my-auto mt-4 pt-2">
+        <TypeIt
+          className="pt-4"
+          options={{
+            waitUntilVisible: true,
+            speed: 50,
+            loop: true,
+            //cursor: false,
           }}
-        ></p>
+          getBeforeInit={(instance) => {
+            instance
+              .type(
+                '<span class="text-lg font-semibold text-gray-100">function Repeat () {</span>'
+              )
+              .pause(750)
+              .break({ delay: 500 })
+              .type(
+                '<span class="text-lg font-semibold text-gray-100">Eat();</span>'
+              )
+              .pause(750)
+              .break({ delay: 500 })
+              .type(
+                '<span class="text-lg font-semibold text-gray-100">Code();</span>'
+              )
+              .pause(750)
+              .break({ delay: 500 })
+              .type(
+                '<span class="text-lg font-semibold text-gray-100">Workout();</span>'
+              )
+              .pause(750)
+              .break({ delay: 500 })
+              .type(
+                '<span class="text-lg font-semibold text-gray-100">LoveYourself();</span>'
+              )
+              .pause(750)
+              .break({ delay: 500 })
+              .type(
+                '<span class="text-lg font-semibold text-gray-100">Sleep();</span>'
+              )
+              .pause(750)
+              
+              .break({ delay: 500 })
+             
+              .type(
+                '<span class="text-lg font-semibold text-gray-100">})();</span>'
+              );
+            return instance;
+            
+          }}
+        />
       </div>
       <p className="text-xs font-light text-white mt-auto flex">
         #Programming#Selfcare
@@ -37,7 +75,7 @@ const Repeat = () => {
 
 const Progress = () => {
   return (
-    <div style={{ height: "100vh", maxHeight:'1000px'}}>
+    <div style={{ height: "100vh", maxHeight: "1000px" }}>
       <div className="max-w-7xl h-full flex mx-auto">
         <div className="flex md:flex-row flex-col items-center w-full px-4 justify-center gap-y-12">
           <div className="order-last md:order-first md:w-auto w-full">
