@@ -1,7 +1,8 @@
 //Note: components:
 import TypeIt from "typeit-react";
+import TiltAnimation from "./shared/TiltAnimation";
 
-const Repeat = () => {
+const RepeatFunction = () => {
   return (
     <div className="bg-secondary-gray  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
       <div className="flex justify-between">
@@ -55,17 +56,17 @@ const Repeat = () => {
                 '<span class="text-lg font-semibold text-gray-100">Sleep();</span>'
               )
               .pause(750)
-              
+
               .break({ delay: 500 })
-             
+
               .type(
                 '<span class="text-lg font-semibold text-gray-100">})();</span>'
               );
             return instance;
-            
           }}
         />
       </div>
+
       <p className="text-xs font-light text-white mt-auto flex">
         #Programming#Selfcare
       </p>
@@ -79,7 +80,9 @@ const Progress = () => {
       <div className="max-w-7xl h-full flex mx-auto">
         <div className="flex md:flex-row flex-col items-center w-full px-4 justify-center gap-y-12">
           <div className="order-last md:order-first md:w-auto w-full">
-            <Repeat />
+            <TiltAnimation>
+            <RepeatFunction />
+            </TiltAnimation>
           </div>
           <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-primary-gray lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
