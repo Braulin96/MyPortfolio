@@ -1,12 +1,10 @@
-.desktopNav li {
+.Nav li {
     position: relative;
     cursor: pointer;
     text-decoration: none;
   }
-  .desktopNav li:hover {
-    color: #000;
-  }
-  .desktopNav li::before {
+ 
+  .Nav li::before {
     content: "";
     position: absolute;
     display: block;
@@ -18,8 +16,7 @@
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
-  
-  .desktopNav li:hover::before {
+  .Nav li:hover::before {
     transform: scaleX(1);
 }
 

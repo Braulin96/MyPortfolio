@@ -41,21 +41,21 @@ const DesktopNavbar = () => {
     transition: "transform 0.4s ease-in-out",
   };
   return (
-    <div className="desktopNav flex justify-between mt-2" style={hideDesktopNavbar}>
-      <div className="flex text-secondary-gray justify-end h-12 my-auto bg-white">
+    <div className="Nav flex justify-between bg-[#17181c] pt-2" style={hideDesktopNavbar}>
+      <div className="flex text-gray-200 justify-end h-12 my-auto">
         <ul className="my-auto flex gap-x-14 mt-4 mr-4">
-          <li className="border-b-2 border-primary-green text-secondary-blue">
+          <li className="border-b-2 border-primary-green">
             Home
           </li>
           <li >About</li>
           <li >Projects</li>
           <li>Skills</li>
-          <li>Contact</li>
+          <li >Contact</li>
         </ul>
       </div>
-      <a className="ml-4 cursor-pointer border px-6 py-1.5 rounded-full border-primary-green my-auto">
+      <button className="slide ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto">
         Git Hub
-      </a>
+      </button>
     </div>
   );
 };
@@ -85,13 +85,13 @@ const MobileNavbar = () => {
       </div>
       <div
         style={hideMobileNavbar}
-        className="flex flex-col bg-secondary-gray text-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
+        className="flex flex-col bg-[#17181c] text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
       >
         <button onClick={() => setShowNavIcon(true)}>
           <IoCloseSharp size={30} className="ml-auto mt-3 mr-3" />
         </button>
-        <ul className="my-auto flex flex-col gap-10 mx-auto text-center">
-          <li className="border-b-2 mx-2" onClick={() => setShowNavIcon(true)}>
+        <ul className="Nav my-auto flex flex-col gap-10 mx-auto text-center text-gray-200">
+          <li className="border-b-2 border-primary-green mx-2" onClick={() => setShowNavIcon(true)}>
             Home
           </li>
           <li>About</li>
@@ -121,7 +121,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed flex w-full z-30 mx-auto bg-white">
+    <div className="fixed flex w-full z-30 mx-auto">
       <div className="w-full flex max-w-7xl mx-auto">
         <div className="h-full flex flex-col ml-auto w-full px-4">
           {windowWidth <= 640 ? <MobileNavbar /> : <DesktopNavbar />}
