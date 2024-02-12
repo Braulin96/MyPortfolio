@@ -1,4 +1,8 @@
+//Note: Hooks:
 import { useState, useEffect } from "react";
+//Note: Components:
+import './Navbar.css'
+//Note: Icons:
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
 
@@ -37,14 +41,14 @@ const DesktopNavbar = () => {
     transition: "transform 0.4s ease-in-out",
   };
   return (
-    <div className="flex justify-between mt-2" style={hideDesktopNavbar}>
+    <div className="desktopNav flex justify-between mt-2" style={hideDesktopNavbar}>
       <div className="flex text-secondary-gray justify-end h-12 my-auto bg-white">
         <ul className="my-auto flex gap-x-14 mt-4 mr-4">
           <li className="border-b-2 border-primary-green text-secondary-blue">
             Home
           </li>
-          <li>About</li>
-          <li>Projects</li>
+          <li >About</li>
+          <li >Projects</li>
           <li>Skills</li>
           <li>Contact</li>
         </ul>
