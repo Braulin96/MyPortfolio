@@ -110,13 +110,13 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className=" px-4 w-fit mx-auto rounded-full flex py-2 mb-12 gap-x-2">
+          <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex py-2 mb-12 gap-x-2">
             <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
-              <p>Resume</p>
+              <p className="font-semibold text-lg">Resume</p>
               <GoArrowUpRight size={20} className="my-auto" />
             </button>
             
-            <a className="my-auto px-2 text-secondary-gray hover:opacity-90 text-lg font-bold">
+            <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
               Let's Talk
             </a>
           </div>
