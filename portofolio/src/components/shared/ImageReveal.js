@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
-import "./GsapAnimation.scss";
+import "./ImageReveal.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
