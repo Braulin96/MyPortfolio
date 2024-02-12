@@ -22,7 +22,7 @@ code {
 
 .slide:hover,
 .slide:focus {
-  box-shadow: inset 6.5em 0 0 0 var(--hover);
+  box-shadow: inset 8.5em 0 0 0 var(--hover);
 }
 
 .slide {
@@ -30,20 +30,49 @@ code {
   --hover: #00CD8F;
 }
 
-button {
+button.slide {
   color: var(--color);
   transition: 0.25s;
 }
-button:hover, button:focus {
+button.slide:hover, button.slide:focus{
   border-color: var(--hover);
   color: #fff;
 }
 
-button {
+button.slide {
   background: none;
   border: 2px solid;
   font: inherit;
   line-height: 1;
   margin: 0.5em;
-  padding: 1em 2em;
 }
+
+.fade:hover,
+.fade:focus {
+  box-shadow: inset 8.5em 0 0 0 var(--hover);
+  color: #00CD8F;
+}
+
+.fade {
+  --color: white;
+  --hover: #17181c;
+}
+button.fade {
+  color: var(--color);
+  transition: 0.25s;
+}
+
+button.fade:hover, button.slide:fade{
+  border-color: var(--hover);
+  color: #00CD8F;
+}
+
+button.fade {
+  background: #00CD8F;
+  border: 2px solid #00CD8F;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+}
+
+
