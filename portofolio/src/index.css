@@ -54,7 +54,7 @@ button.slide {
 }
 
 .fade {
-  --color: white;
+  --color: black;
   --hover: #17181c;
 }
 button.fade {
