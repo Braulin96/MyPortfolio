@@ -8,7 +8,7 @@ const MyProjects = () => {
             <br />
             Projects
           </p>
-          <p className="sm:text-4xl text-2xl text-secondary-gray font-extralight z-20 lg:mt-12 mt-6">
+          <p className="sm:text-4xl text-2xl text-gray-200 font-extralight z-20 lg:mt-12 mt-6">
             Focused in turn ideas into visually striking websites with a focus
             on exceptional
             <span className="font-normal ml-2 text-primary-green">user experiences</span>.

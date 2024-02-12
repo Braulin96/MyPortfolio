@@ -8,7 +8,7 @@ const AboutMe = () => {
             <br />
             Me
           </p>
-          <p className="sm:text-4xl text-2xl text-secondary-gray font-extralight lg:mt-12 mt-6 z-20">
+          <p className="sm:text-4xl text-2xl text-gray-200 font-extralight lg:mt-12 mt-6 z-20">
             A front-End Developer who loves creating websites that are not only
             visually appealing but also
             <span className="font-normal ml-2 text-primary-green">user-friendly</span>.

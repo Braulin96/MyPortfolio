@@ -6,7 +6,7 @@ const Skills = () => {
           <p className="sm:text-8xl text-6xl font-semibold text-primary-gray">
             Skills
           </p>
-          <div className="grid md:grid-cols-4 grid-cols-2 w-full gap-x-10 md:text-xl text-base lg:mt-0 mt-6 gap-y-12 text-secondary-gray">
+          <div className="grid md:grid-cols-4 grid-cols-2 w-full gap-x-10 md:text-xl text-base lg:mt-0 mt-6 gap-y-12 text-gray-200">
             <ul className="font-light flex flex-col gap-y-4 mx-auto w-40">
               <li>React JS</li>
               <li>JavaScript</li>
