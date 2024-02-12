@@ -27,7 +27,7 @@ const HeroSection = () => {
                     .pause(750)
                     .break({ delay: 500 })
                     .type(
-                      '<span class="text-4xl text-secondary-gray font-extralight">Front-Ennd Dev</span>',
+                      '<span class="text-4xl text-white font-extralight">Front-Ennd Dev</span>',
                       {
                         speed: 100,
                       }
@@ -40,7 +40,7 @@ const HeroSection = () => {
                     .move(null, { to: "END" })
                     .pause(750)
                     .type(
-                      '<span class="text-4xl text-secondary-gray font-extralight">eloper - Web Designer</span>',
+                      '<span class="text-4xl text-white font-extralight">eloper - Web Designer</span>',
                       {
                         speed: 100,
                       }
@@ -110,7 +110,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex py-2 mb-12 gap-x-2">
+          <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2">
             <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
               <p className="font-semibold text-lg">Resume</p>
               <GoArrowUpRight size={20} className="my-auto" />
