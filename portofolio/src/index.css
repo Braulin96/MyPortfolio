@@ -49,7 +49,7 @@ button.slide {
 /* fade button used in HeroSection and in projectList*/
 .fade:hover,
 .fade:focus {
-  box-shadow: inset 8.5em 0 0 0 var(--hover);
+  box-shadow: inset 10em 0 0 0 var(--hover);
   color: #00CD8F;
 }
 
