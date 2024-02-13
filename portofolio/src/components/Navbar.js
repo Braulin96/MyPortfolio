@@ -41,7 +41,9 @@ const DesktopNavbar = () => {
     transition: "transform 0.4s ease-in-out",
   };
   return (
+    <div className="animate-fade-down animate-delay-[7s] animate-duration-[1s]">
     <div className="Nav flex justify-between bg-[#17181c] pt-2" style={hideDesktopNavbar}>
+      
       <div className="flex text-gray-200 justify-end h-12 my-auto">
         <ul className="my-auto flex gap-x-14 mt-4 mr-4">
           <li className="border-b-2 border-primary-green">
@@ -56,6 +58,7 @@ const DesktopNavbar = () => {
       <button className="slide ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto">
         Git Hub
       </button>
+      </div>
     </div>
   );
 };
