@@ -84,7 +84,7 @@ const Progress = () => {
             <RepeatFunction />
             </TiltAnimation>
           </div>
-          <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-primary-gray lg:leading-tight leading-none md:ml-8">
+          <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-white lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
           </p>
         </div>
