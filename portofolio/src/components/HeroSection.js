@@ -22,30 +22,30 @@ const HeroSection = () => {
                     .type(
                       '<span class="text-8xl text-white font-extralight" style="font-family: Allura, cursive;">Braulin Piress</span>'
                     )
-                    .pause(750)
+                    .pause(250)
                     .delete(1)
-                    .pause(750)
-                    .break({ delay: 500 })
+                    .pause(250)
+                    .break({ delay: 200 })
                     .type(
                       '<span class="text-4xl text-white font-extralight">Front-Ennd Dev</span>',
                       {
                         speed: 100,
                       }
                     )
-                    .pause(750)
+                    .pause(250)
                     .move(-6)
-                    .pause(750)
+                    .pause(250)
                     .delete(1)
-                    .pause(750)
+                    .pause(250)
                     .move(null, { to: "END" })
-                    .pause(750)
+                    .pause(250)
                     .type(
                       '<span class="text-4xl text-white font-extralight">eloper - Web Designer</span>',
                       {
                         speed: 100,
                       }
                     )
-                    .pause(750)
+                    .pause(250)
                     .exec(() => {
                       // Hide cursor when typing animation is complete
                       document.querySelector(".ti-cursor").style.visibility =
@@ -108,14 +108,13 @@ const HeroSection = () => {
               </p>
             </div>
           </div>
-
-          <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2">
+          <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2 animate-fade-up animate-delay-[8s] animate-duration-[1s]">
             <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
               <p className="font-semibold text-lg">Resume</p>
               <GoArrowUpRight size={20} className="my-auto" />
             </button>
             
-            <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
+            <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer animate-pulse">
               Let's Talk
             </a>
           </div>
