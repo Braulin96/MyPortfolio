@@ -36,7 +36,7 @@ button.slide {
 }
 button.slide:hover, button.slide:focus{
   border-color: var(--hover);
-  color: #fff;
+  color: black;
 }
 
 button.slide {
