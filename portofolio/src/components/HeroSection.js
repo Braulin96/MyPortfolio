@@ -103,8 +103,7 @@ const HeroSection = () => {
               >
                 Braulin Pires
               </p>
-
-              <p className="text-3xl text-secondary-gray font-extralight mx-auto ">
+              <p className="text-3xl text-white font-extralight mx-auto ">
                 Front-End Developer <br /> Web Designer
               </p>
             </div>
