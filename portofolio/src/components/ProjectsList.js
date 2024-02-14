@@ -157,7 +157,6 @@ const ModuleProject = ({
                     <p className="font-semibold text-lg">Watch live</p>
                     <GoArrowUpRight size={20} className="my-auto" />
                   </button>
-
                   <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
                     GitHub
                   </a>
@@ -169,9 +168,8 @@ const ModuleProject = ({
             </FadeOnScroll>
           </div>
         </div>
-
         <div className="md:flex flex-col hidden my-auto gap-y-20">
-          <FadeOnScroll data="fade" delay="2200" duration="1500" offset="600">
+          <FadeOnScroll data="fade" delay="2000" duration="1000" offset="600">
             {TWDImages.map((image) => (
               <div
                 key={image.id}
@@ -179,7 +177,7 @@ const ModuleProject = ({
                 style={{ height: "100vh" }}
               >
                 <TiltAnimation>
-                  <img className="" src={image.src} alt={image.alt} />
+                  <img src={image.src} alt={image.alt} />
                 </TiltAnimation>
               </div>
             ))}
