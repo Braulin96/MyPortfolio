@@ -106,7 +106,7 @@ const HeroSection = () => {
               </p>
             </div>
           </div>
-          <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2 animate-fade-up animate-delay-[8s] animate-duration-[1s]">
+          <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2 animate-fade-up animate-delay-[7s] animate-duration-[1s]">
             <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
               <p className="font-semibold text-lg">Resume</p>
               <GoArrowUpRight size={20} className="my-auto" />
