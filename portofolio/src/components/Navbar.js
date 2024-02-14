@@ -87,12 +87,12 @@ const MobileNavbar = () => {
       </div>
       <div
         style={hideMobileNavbar}
-        className="flex flex-col bg-[#17181c] text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
+        className="flex flex-col bg-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
       >
         <button onClick={() => setShowNavIcon(true)}>
-          <IoCloseSharp size={30} className="ml-auto mt-3 mr-3" />
+          <IoCloseSharp color="black" size={30} className="ml-auto mt-3 mr-3" />
         </button>
-        <ul className="Nav my-auto flex flex-col gap-10 mx-auto text-center text-gray-200">
+        <ul className="Nav my-auto flex flex-col gap-10 mx-auto text-center text-[#17181c]">
           <li className="border-b-2 border-primary-green mx-2" onClick={() => setShowNavIcon(true)}>
             Home
           </li>
