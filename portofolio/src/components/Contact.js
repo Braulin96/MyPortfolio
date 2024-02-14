@@ -43,7 +43,7 @@ const Contact = () => {
         </div>
         
         <div className="flex my-auto sm:mr-12">
-        <FadeOnScroll data="fade" duration="1200" delay="1600">
+        <FadeOnScroll data="fade" duration="1200" delay="1600" offset="400">
           <Lottie
             className="my-auto opacity-80"
             animationData={Mobile}
