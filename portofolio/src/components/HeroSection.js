@@ -20,10 +20,8 @@ const HeroSection = () => {
                 getBeforeInit={(instance) => {
                   instance
                     .type(
-                      '<span class="text-8xl text-white font-extralight" style="font-family: Allura, cursive;">Braulin Piress</span>'
+                      '<span class="text-8xl text-white font-extralight" style="font-family: Allura, cursive;">Braulin Pires</span>'
                     )
-                    .pause(250)
-                    .delete(1)
                     .pause(250)
                     .break({ delay: 200 })
                     .type(
