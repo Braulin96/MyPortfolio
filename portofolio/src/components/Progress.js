@@ -86,7 +86,7 @@ const Progress = () => {
               <RepeatFunction />
             </TiltAnimation>
           </div>
-          <FadeOnScroll data="fade" duration="1500" delay="1000">
+          <FadeOnScroll data="fade" duration="1500" delay="500">
           <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-white lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
           </p>
