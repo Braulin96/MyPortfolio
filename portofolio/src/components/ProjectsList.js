@@ -131,16 +131,16 @@ const ModuleProject = ({
               </div>
             </FadeOnScroll>
             <div className="flex flex-col md:py-28 py-0">
-              <FadeOnScroll data="fade" delay="200" duration="1000">
+              <FadeOnScroll data="fade" delay="100" duration="1000">
                 <p className="text-5xl ml-4">{projectName}</p>
               </FadeOnScroll>
-              <FadeOnScroll data="fade" delay="400" duration="1000">
+              <FadeOnScroll data="fade" delay="200" duration="1000">
                 <div className="flex mt-12">
                   <BsDot className="my-auto" size={30} color="#9EABA2" />
                   <p className="text-3xl my-auto ">{rule}</p>
                 </div>
               </FadeOnScroll>
-              <FadeOnScroll data="fade" delay="600" duration="1000">
+              <FadeOnScroll data="fade" delay="300" duration="1000">
                 <p className="ml-4 mt-4 text-xl">{description}</p>
               </FadeOnScroll>
 
@@ -151,7 +151,7 @@ const ModuleProject = ({
                 </p>
               </div>
 
-              <FadeOnScroll data="fade" delay="800" duration="1000">
+              <FadeOnScroll data="fade" delay="400" duration="1000">
                 <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
                   <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
                     <p className="font-semibold text-lg">Watch live</p>
@@ -164,7 +164,7 @@ const ModuleProject = ({
                 </div>
               </FadeOnScroll>
             </div>
-            <FadeOnScroll data="fade" delay="1200" duration="1000" offset="10">
+            <FadeOnScroll data="fade" delay="1200" duration="500" offset="10">
               <p className="text-xl underline md:flex hidden">React App</p>
             </FadeOnScroll>
           </div>
