@@ -35,7 +35,7 @@ const Contact = () => {
           </div>
         </div>
         <FadeOnScroll data="fade" duration="1600" delay="1500" offset="400">
-          <div className="flex my-auto sm:mr-12 bg-white  bg-opacity-10 rounded-full p-5 shadow-md sm:mx-0 mx-4">
+          <div className="flex my-auto sm:mr-12 bg-white  bg-opacity-10 rounded-full p-5 shadow-md sm:mx-0 mx-4 sm:mt-0 mt-8">
             <Lottie
               className="my-auto opacity-80"
               animationData={Robot}
