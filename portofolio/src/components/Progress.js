@@ -1,9 +1,11 @@
 //Note: components:
 import TypeIt from "typeit-react";
 import TiltAnimation from "./shared/TiltAnimation";
+import FadeOnScroll from "./shared/FadeOnScroll";
 
 const RepeatFunction = () => {
   return (
+    <FadeOnScroll data="fade" duration="1000" delay="0" >
     <div className="bg-white bg-opacity-10  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
       <div className="flex justify-between">
         <div className="flex space-x-1.5">
@@ -15,7 +17,6 @@ const RepeatFunction = () => {
           <p className="text-xs font-light text-white"> Motivation.txt</p>
         </div>
       </div>
-
       <div className="border-t my-auto mt-4 pt-2">
         <TypeIt
           className="pt-4"
@@ -71,6 +72,7 @@ const RepeatFunction = () => {
         #Programming#Selfcare
       </p>
     </div>
+    </FadeOnScroll>
   );
 };
 
@@ -81,12 +83,14 @@ const Progress = () => {
         <div className="flex md:flex-row flex-col items-center w-full px-4 justify-center gap-y-12">
           <div className="order-last md:order-first md:w-auto w-full">
             <TiltAnimation>
-            <RepeatFunction />
+              <RepeatFunction />
             </TiltAnimation>
           </div>
+          <FadeOnScroll data="fade" duration="1000" delay="700">
           <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-white lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
           </p>
+          </FadeOnScroll>
         </div>
       </div>
     </div>
