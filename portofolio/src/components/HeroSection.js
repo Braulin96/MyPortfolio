@@ -112,7 +112,7 @@ const HeroSection = () => {
               <GoArrowUpRight size={20} className="my-auto" />
             </button>
             
-            <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer animate-pulse">
+            <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
               Let's Talk
             </a>
           </div>
