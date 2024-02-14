@@ -14,6 +14,7 @@ import "swiper/css/bundle";
 import "swiper/css/effect-cube";
 import "swiper/css/navigation";
 import TiltAnimation from "./shared/TiltAnimation";
+import FadeOnScroll from "./shared/FadeOnScroll";
 
 //Note:images/icons:
 import { BsDot } from "react-icons/bs";
@@ -117,6 +118,7 @@ const ModuleProject = ({
   return (
     <div className="max-w-7xl flex items-center mx-auto px-4">
       <div className="flex h-full gap-x-12">
+      <FadeOnScroll data="fade" delay="500" duration="1000">
         <div
           className="flex flex-col gap-y-20 md:sticky  md:h-[100vh]"
           style={{
@@ -154,8 +156,9 @@ const ModuleProject = ({
             <p className="text-xl underline md:flex hidden">React App</p>
           </div>
         </div>
-
+        </FadeOnScroll>
         <div className="md:flex flex-col hidden my-auto gap-y-20">
+          <FadeOnScroll data="fade-left" delay="1200" duration="1000">
           {TWDImages.map((image) => (
             <div
               key={image.id}
@@ -166,7 +169,9 @@ const ModuleProject = ({
                 <img className="" src={image.src} alt={image.alt} />
               </TiltAnimation>
             </div>
+            
           ))}
+          </FadeOnScroll>
         </div>
       </div>
     </div>
