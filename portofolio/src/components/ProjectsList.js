@@ -34,7 +34,7 @@ const SlideCarousel = () => {
   const swiperRef = useRef();
   return (
     <div
-      className="animate-once animate-fade-left animate-duration-[2s] w-fit"
+      className="w-fit"
       style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
     >
       <Swiper
@@ -118,7 +118,7 @@ const ModuleProject = ({
   return (
     <div className="max-w-7xl flex items-center mx-auto px-4">
       <div className="flex h-full gap-x-12">
-      <FadeOnScroll data="fade" delay="500" duration="1000">
+      <FadeOnScroll data="fade" delay="500" duration="1500">
         <div
           className="flex flex-col gap-y-20 md:sticky  md:h-[100vh]"
           style={{
@@ -149,7 +149,7 @@ const ModuleProject = ({
                 </button>
 
                 <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
-                  GitHub
+                  GitHubs
                 </a>
               </div>
             </div>
@@ -158,7 +158,7 @@ const ModuleProject = ({
         </div>
         </FadeOnScroll>
         <div className="md:flex flex-col hidden my-auto gap-y-20">
-          <FadeOnScroll data="fade-left" delay="1200" duration="1000">
+          <FadeOnScroll data="fade" delay="1200" duration="1500">
           {TWDImages.map((image) => (
             <div
               key={image.id}

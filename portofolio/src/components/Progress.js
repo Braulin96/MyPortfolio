@@ -5,7 +5,7 @@ import FadeOnScroll from "./shared/FadeOnScroll";
 
 const RepeatFunction = () => {
   return (
-    <FadeOnScroll data="fade" duration="1000" delay="0" >
+    <FadeOnScroll data="fade" duration="1500" delay="0" >
     <div className="bg-white bg-opacity-10  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
       <div className="flex justify-between">
         <div className="flex space-x-1.5">
@@ -86,7 +86,7 @@ const Progress = () => {
               <RepeatFunction />
             </TiltAnimation>
           </div>
-          <FadeOnScroll data="fade" duration="1000" delay="700">
+          <FadeOnScroll data="fade" duration="1500" delay="1000">
           <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-white lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
           </p>
