@@ -118,7 +118,6 @@ const ModuleProject = ({
   return (
     <div className="max-w-7xl flex items-center mx-auto px-4">
       <div className="flex h-full gap-x-12">
-      <FadeOnScroll data="fade" delay="500" duration="1500">
         <div
           className="flex flex-col gap-y-20 md:sticky  md:h-[100vh]"
           style={{
@@ -126,51 +125,64 @@ const ModuleProject = ({
           }}
         >
           <div className="my-auto text-white font-light">
-            <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
-              <p className="mx-auto text-lg text-[#17181c]">{number}</p>
-            </div>
-            <div className="flex flex-col md:py-28 py-0">
-              <p className="text-5xl ml-4">{projectName}</p>
-              <div className="flex mt-12">
-                <BsDot className="my-auto" size={30} color="#9EABA2" />
-                <p className="text-3xl my-auto ">{rule}</p>
+            <FadeOnScroll data="fade" delay="0" duration="1000">
+              <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
+                <p className="mx-auto text-lg text-[#17181c]">{number}</p>
               </div>
-              <p className="ml-4 mt-4 text-xl">{description}</p>
+            </FadeOnScroll>
+            <div className="flex flex-col md:py-28 py-0">
+              <FadeOnScroll data="fade" delay="200" duration="1000">
+                <p className="text-5xl ml-4">{projectName}</p>
+              </FadeOnScroll>
+              <FadeOnScroll data="fade" delay="400" duration="1000">
+                <div className="flex mt-12">
+                  <BsDot className="my-auto" size={30} color="#9EABA2" />
+                  <p className="text-3xl my-auto ">{rule}</p>
+                </div>
+              </FadeOnScroll>
+              <FadeOnScroll data="fade" delay="600" duration="1000">
+                <p className="ml-4 mt-4 text-xl">{description}</p>
+              </FadeOnScroll>
+
               <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
                 <SlideCarousel />
                 <p className="text-sm mt-8 underline flex md:hidden">
                   React App
                 </p>
               </div>
-              <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
-                <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
-                  <p className="font-semibold text-lg">Watch live</p>
-                  <GoArrowUpRight size={20} className="my-auto" />
-                </button>
 
-                <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
-                  GitHubs
-                </a>
-              </div>
+              <FadeOnScroll data="fade" delay="800" duration="1000">
+                <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
+                  <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
+                    <p className="font-semibold text-lg">Watch live</p>
+                    <GoArrowUpRight size={20} className="my-auto" />
+                  </button>
+
+                  <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
+                    GitHub
+                  </a>
+                </div>
+              </FadeOnScroll>
             </div>
-            <p className="text-xl underline md:flex hidden">React App</p>
+            <FadeOnScroll data="fade" delay="1200" duration="1000" offset="10">
+              <p className="text-xl underline md:flex hidden">React App</p>
+            </FadeOnScroll>
           </div>
         </div>
-        </FadeOnScroll>
+
         <div className="md:flex flex-col hidden my-auto gap-y-20">
-          <FadeOnScroll data="fade" delay="1200" duration="1500">
-          {TWDImages.map((image) => (
-            <div
-              key={image.id}
-              className="flex h-full flex-col my-auto items-center justify-center"
-              style={{ height: "100vh" }}
-            >
-              <TiltAnimation>
-                <img className="" src={image.src} alt={image.alt} />
-              </TiltAnimation>
-            </div>
-            
-          ))}
+          <FadeOnScroll data="fade" delay="2200" duration="1500" offset="600">
+            {TWDImages.map((image) => (
+              <div
+                key={image.id}
+                className="flex h-full flex-col my-auto items-center justify-center"
+                style={{ height: "100vh" }}
+              >
+                <TiltAnimation>
+                  <img className="" src={image.src} alt={image.alt} />
+                </TiltAnimation>
+              </div>
+            ))}
           </FadeOnScroll>
         </div>
       </div>
