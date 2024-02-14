@@ -45,8 +45,7 @@ const Skills = () => {
                 </ul>
                 </FadeOnScroll>
               </div>
-        
-          </div>w
+          </div>
         </div>
       </div>
     </div>
