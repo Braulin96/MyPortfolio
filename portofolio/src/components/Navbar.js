@@ -41,9 +41,8 @@ const DesktopNavbar = () => {
     transition: "transform 0.4s ease-in-out",
   };
   return (
-    <div className="animate-fade-down animate-delay-[7s] animate-duration-[1s]">
+    <div className="animate-fade-down animate-delay-[6s] animate-duration-[1s]">
     <div className="Nav flex justify-between bg-[#17181c] pt-2" style={hideDesktopNavbar}>
-      
       <div className="flex text-gray-200 justify-end h-12 my-auto">
         <ul className="my-auto flex gap-x-14 mt-4 mr-4">
           <li className="border-b-2 border-primary-green">
