@@ -34,7 +34,7 @@ const SlideCarousel = () => {
   const swiperRef = useRef();
   return (
     <div
-      className="w-fit"
+      className="w-fit relative"
       style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
     >
       <Swiper
