@@ -4,16 +4,17 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const FadeOnScroll = ({ data,duration, delay, children }) => {
+const FadeOnScroll = ({ data,duration, delay, children, offset }) => {
   useEffect(() => {
     AOS.init({
       disable: "phone",
     });
   }, []);
+    const offsetValue = offset || 200;
   return (
     <div
       data-aos={data}
-      data-aos-offset="200"
+      data-aos-offset={offsetValue}
       data-aos-easing="ease-in-sine"
       data-aos-duration={duration}
       data-aos-delay={delay}
