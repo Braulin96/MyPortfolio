@@ -9,9 +9,9 @@ const RepeatFunction = () => {
     <div className="bg-white bg-opacity-10  mx-auto md:w-96 w-full h-80 py-2 px-4 rounded-lg flex flex-col shrink-0 z-20 shadow-lg">
       <div className="flex justify-between">
         <div className="flex space-x-1.5">
-          <div className="w-3 h-3 rounded-full bg-red-500"></div>
-          <div className="w-3 h-3 rounded-full bg-white"></div>
-          <div className="w-3 h-3 rounded-full bg-primary-green"></div>
+          <div className="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
+          <div className="w-3 h-3 rounded-full bg-white animate-pulse"></div>
+          <div className="w-3 h-3 rounded-full bg-primary-green animate-pulse"></div>
         </div>
         <div>
           <p className="text-xs font-light text-white"> Motivation.txt</p>
@@ -31,34 +31,34 @@ const RepeatFunction = () => {
               .type(
                 '<span class="text-lg font-semibold text-gray-100">function Repeat () {</span>'
               )
-              .pause(750)
-              .break({ delay: 500 })
+              .pause(350)
+              .break({ delay: 250 })
               .type(
                 '<span class="text-lg font-semibold text-gray-100">Eat();</span>'
               )
-              .pause(750)
-              .break({ delay: 500 })
+              .pause(350)
+              .break({ delay: 250 })
               .type(
                 '<span class="text-lg font-semibold text-gray-100">Code();</span>'
               )
-              .pause(750)
-              .break({ delay: 500 })
+              .pause(350)
+              .break({ delay: 250 })
               .type(
                 '<span class="text-lg font-semibold text-gray-100">Workout();</span>'
               )
-              .pause(750)
-              .break({ delay: 500 })
+              .pause(350)
+              .break({ delay: 250 })
               .type(
                 '<span class="text-lg font-semibold text-gray-100">LoveYourself();</span>'
               )
-              .pause(750)
-              .break({ delay: 500 })
+              .pause(350)
+              .break({ delay: 250 })
               .type(
                 '<span class="text-lg font-semibold text-gray-100">Sleep();</span>'
               )
-              .pause(750)
+              .pause(350)
 
-              .break({ delay: 500 })
+              .break({ delay: 250 })
 
               .type(
                 '<span class="text-lg font-semibold text-gray-100">})();</span>'
