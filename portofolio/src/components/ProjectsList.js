@@ -13,6 +13,8 @@ import {
 import "swiper/css/bundle";
 import "swiper/css/effect-cube";
 import "swiper/css/navigation";
+import TiltAnimation from "./shared/TiltAnimation";
+import FadeOnScroll from "./shared/FadeOnScroll";
 
 //Note:images/icons:
 import { BsDot } from "react-icons/bs";
@@ -21,8 +23,6 @@ import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi2";
-
-
 
 const TWDImages = [
   { id: 1, src: SecondLaptop, alt: "Laptop version TWD" },
@@ -34,7 +34,7 @@ const SlideCarousel = () => {
   const swiperRef = useRef();
   return (
     <div
-      className="animate-once animate-fade-left animate-duration-[2s] w-fit"
+      className="w-fit relative"
       style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
     >
       <Swiper
@@ -80,24 +80,29 @@ const SlideCarousel = () => {
         ))}
       </Swiper>
       <div className="z-50 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
-          <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-            onClick={() => swiperRef.current?.slidePrev()}
-          >
-            <HiArrowSmallLeft color="White" 
-              className="opacity-70 hover:opacity-100"
-              size={20}
-            />
-          </button>
-        </div>
-        <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
-          <button
-            className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
-            onClick={() => swiperRef.current?.slideNext()}
-          >
-            <HiArrowRight color="White" className="opacity-70 hover:opacity-100" size={20} />
-          </button>
-        </div>
+        <button
+          className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <HiArrowSmallLeft
+            color="White"
+            className="opacity-70 hover:opacity-100"
+            size={20}
+          />
+        </button>
+      </div>
+      <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
+        <button
+          className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <HiArrowRight
+            color="White"
+            className="opacity-70 hover:opacity-100"
+            size={20}
+          />
+        </button>
+      </div>
     </div>
   );
 };
@@ -112,24 +117,32 @@ const ModuleProject = ({
 }) => {
   return (
     <div className="max-w-7xl flex items-center mx-auto px-4">
-      <div className="flex bg-white h-full gap-x-12">
+      <div className="flex h-full gap-x-12">
         <div
-          className="flex flex-col gap-y-20 md:sticky bg-white md:h-[100vh]"
+          className="flex flex-col gap-y-20 md:sticky  md:h-[100vh]"
           style={{
             top: 0,
           }}
         >
-          <div className="my-auto text-secondary-gray font-light">
-            <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center">
-              <p className="mx-auto text-lg">{number}</p>
-            </div>
-            <div className="flex flex-col md:py-28 py-0">
-              <p className="text-5xl ml-4 ">{projectName}</p>
-              <div className="flex mt-12">
-                <BsDot className="my-auto" size={30} color="#9EABA2" />
-                <p className="text-3xl my-auto ">{rule}</p>
+          <div className="my-auto text-white font-light">
+            <FadeOnScroll data="fade" delay="0" duration="1000">
+              <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
+                <p className="mx-auto text-lg text-[#17181c]">{number}</p>
               </div>
-              <p className="ml-4 mt-4 text-xl">{description}</p>
+            </FadeOnScroll>
+            <div className="flex flex-col md:py-28 py-0">
+              <FadeOnScroll data="fade" delay="100" duration="1000">
+                <p className="text-5xl ml-4">{projectName}</p>
+              </FadeOnScroll>
+              <FadeOnScroll data="fade" delay="200" duration="1000">
+                <div className="flex mt-12">
+                  <BsDot className="my-auto" size={30} color="#9EABA2" />
+                  <p className="text-3xl my-auto ">{rule}</p>
+                </div>
+              </FadeOnScroll>
+              <FadeOnScroll data="fade" delay="300" duration="1000">
+                <p className="ml-4 mt-4 text-xl">{description}</p>
+              </FadeOnScroll>
 
               <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
                 <SlideCarousel />
@@ -138,46 +151,37 @@ const ModuleProject = ({
                 </p>
               </div>
 
-              <div className="bg-[#F5F5F5] px-4 w-fit md:mt-12 mt-6 rounded-full flex py-2 mb-12 gap-x-2 md:mx-0 mx-auto">
-                <a className="text-white mx-auto hover:bg-opacity-90 font-semibold w-fit bg-primary-green rounded-full px-6 py-1.5 flex gap-x-1">
-                  <a
-                    href={liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-lg"
-                  >
-                    Watch live
+              <FadeOnScroll data="fade" delay="400" duration="1000">
+                <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
+                  <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
+                    <p className="font-semibold text-lg">Watch live</p>
+                    <GoArrowUpRight size={20} className="my-auto" />
+                  </button>
+                  <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
+                    GitHub
                   </a>
-                  <GoArrowUpRight size={20} className="my-auto" />
-                </a>
-                <a
-                  href={gitHub}
-                  target="_blank"
-                  rel="noopener noreferrer" // This is important for security reasons
-                  className="my-auto px-2 text-secondary-gray font-bold hover:opacity-90 text-lg"
-                >
-                  GitHub
-                </a>
-              </div>
+                </div>
+              </FadeOnScroll>
             </div>
-            <p className="text-xl underline md:flex hidden">React App</p>
+            <FadeOnScroll data="fade" delay="1200" duration="500" offset="10">
+              <p className="text-xl underline md:flex hidden">React App</p>
+            </FadeOnScroll>
           </div>
         </div>
-
         <div className="md:flex flex-col hidden my-auto gap-y-20">
-          {TWDImages.map((image) => (
-            <div
-              key={image.id}
-              className="flex h-full flex-col my-auto items-center justify-center"
-              style={{ height: "100vh" }}
-            >
-              <img
-                className="animate-fade-left animate-duration-1000 animate-delay-1000"
-                src={image.src}
-                alt={image.alt}
-              />
-            </div>
-          ))}
+          <FadeOnScroll data="fade" delay="2000" duration="1000" offset="600">
+            {TWDImages.map((image) => (
+              <div
+                key={image.id}
+                className="flex h-full flex-col my-auto items-center justify-center"
+                style={{ height: "100vh" }}
+              >
+                <TiltAnimation>
+                  <img src={image.src} alt={image.alt} />
+                </TiltAnimation>
+              </div>
+            ))}
+          </FadeOnScroll>
         </div>
       </div>
     </div>
@@ -186,7 +190,7 @@ const ModuleProject = ({
 
 const ProjectsList = () => {
   return (
-    <div >
+    <div>
       <ModuleProject
         number="01"
         projectName="Dashboard TWD"

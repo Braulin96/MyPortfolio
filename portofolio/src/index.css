@@ -5,6 +5,8 @@
 @tailwind utilities;
 
 body {
+  color: #fff;
+  background: #17181c; 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -17,3 +19,84 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* slide used in gitHub button in Navbar*/
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 8.5em 0 0 0 var(--hover);
+}
+
+.slide {
+  --color: #00CD8F;
+  --hover: #00CD8F;
+}
+
+button.slide {
+  color: var(--color);
+  transition: 0.25s;
+}
+button.slide:hover, button.slide:focus{
+  border-color: var(--hover);
+  color: black;
+}
+
+button.slide {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+}
+/* fade button used in HeroSection and in projectList*/
+.fade:hover,
+.fade:focus {
+  box-shadow: inset 10em 0 0 0 var(--hover);
+  color: #00CD8F;
+}
+
+.fade {
+  --color: black;
+  --hover: #17181c;
+}
+button.fade {
+  color: var(--color);
+  transition: 0.25s;
+}
+
+button.fade:hover, button.slide:fade{
+  border-color: var(--hover);
+  color: #00CD8F;
+}
+
+button.fade {
+  background: #00CD8F;
+  border: 2px solid #00CD8F;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+}
+
+/* secondary button used in HeroSection and in projectList*/
+.secondaryButton {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+.secondaryButton::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00CD8F;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.secondaryButton:hover::before {
+  transform: scaleX(1);
+}
+
+
+
+
