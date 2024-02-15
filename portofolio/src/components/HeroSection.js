@@ -12,7 +12,7 @@ const HeroSection = () => {
             <div className="hidden sm:flex">
               <TypeIt
                 options={{
-                  waitUntilVisible: true,
+                  //waitUntilVisible: true,
                   speed: 50,
                   //loop: true,
                   //cursor: false,
