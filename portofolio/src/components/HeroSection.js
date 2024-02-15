@@ -1,11 +1,11 @@
 //Note; Components:
 import TypeIt from "typeit-react";
+import { Link, animateScroll as scroll } from "react-scroll";
 //Note : Icon:
 import { GoArrowUpRight } from "react-icons/go";
 
 const HeroSection = () => {
   return (
-  
       <div id="home" style={{ height: "100vh", maxHeight: "1000px" }}>
         <div className="max-w-7xl mx-auto h-full flex flex-col">
           <div className="my-auto mx-auto text-center flex flex-col gap-y-4">
@@ -111,10 +111,9 @@ const HeroSection = () => {
               <p className="font-semibold text-lg">Resume</p>
               <GoArrowUpRight size={20} className="my-auto" />
             </button>
-            
-            <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
+            <Link to="contact" spy={true} smooth={true} duration={1000} className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
               Let's Talk
-            </a>
+            </Link>
           </div>
         </div>
       </div>
