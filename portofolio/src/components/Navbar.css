@@ -1,10 +1,10 @@
-.Nav li {
+.Nav a {
     position: relative;
     cursor: pointer;
     text-decoration: none;
   }
  
-  .Nav li::before {
+  .Nav a::before {
     content: "";
     position: absolute;
     display: block;
@@ -16,7 +16,7 @@
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
-  .Nav li:hover::before {
+  .Nav a:hover::before {
     transform: scaleX(1);
 }
 

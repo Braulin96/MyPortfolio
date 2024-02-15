@@ -79,7 +79,7 @@ const SlideCarousel = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="z-50 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
+      <div className="z-20 absolute left-0 top-1/2 transform -translate-y-1/2 rounded-full">
         <button
           className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
           onClick={() => swiperRef.current?.slidePrev()}
@@ -91,7 +91,7 @@ const SlideCarousel = () => {
           />
         </button>
       </div>
-      <div className="z-50 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
+      <div className="z-20 absolute right-0 top-1/2 transform -translate-y-1/2 rounded-full">
         <button
           className="bg-[#68736C] shadow-lg border rounded-full p-1 hover:bg-opacity-70"
           onClick={() => swiperRef.current?.slideNext()}
@@ -153,10 +153,10 @@ const ModuleProject = ({
 
               <FadeOnScroll data="fade" delay="400" duration="1000">
                 <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
-                  <button className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
+                  <a className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
                     <p className="font-semibold text-lg">Watch live</p>
                     <GoArrowUpRight size={20} className="my-auto" />
-                  </button>
+                  </a>
                   <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
                     GitHub
                   </a>
@@ -190,7 +190,7 @@ const ModuleProject = ({
 
 const ProjectsList = () => {
   return (
-    <div>
+    <div id="projectList">
       <ModuleProject
         number="01"
         projectName="Dashboard TWD"
@@ -200,7 +200,6 @@ const ProjectsList = () => {
         liveLink="https://www.abola.pt/"
         gitHub="https://sureshmurali.github.io/"
       />
-
       {/* <SwiperProject /> */}
     </div>
   );

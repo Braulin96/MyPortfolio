@@ -1,7 +1,8 @@
 //Note: Hooks:
 import { useState, useEffect } from "react";
 //Note: Components:
-import './Navbar.css'
+import { Link, animateScroll as scroll } from "react-scroll";
+import "./Navbar.css";
 //Note: Icons:
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
@@ -42,21 +43,43 @@ const DesktopNavbar = () => {
   };
   return (
     <div className="animate-fade-down animate-delay-[6s] animate-duration-[1s]">
-    <div className="Nav flex justify-between bg-[#17181c] pt-2" style={hideDesktopNavbar}>
-      <div className="flex text-gray-200 justify-end h-12 my-auto">
-        <ul className="my-auto flex gap-x-14 mt-4 mr-4">
-          <li className="border-b-2 border-primary-green">
-            Home
-          </li>
-          <li >About</li>
-          <li >Projects</li>
-          <li>Skills</li>
-          <li >Contact</li>
-        </ul>
-      </div>
-      <button className="slide ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto">
-        Git Hub
-      </button>
+      <div
+        className="flex justify-between bg-[#17181c] pt-2"
+        style={hideDesktopNavbar}
+      >
+        <div className="Nav flex text-gray-200 justify-end h-12 my-auto">
+          <ul className="my-auto flex gap-x-14 mt-4 mr-4">
+            <Link
+              to="home"
+              className="border-b-2 border-primary-green"
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
+              Home
+            </Link>
+            <Link to="aboutMe" spy={true} smooth={true} duration={1000}>
+              About
+            </Link>
+            <Link to="projectList" spy={true} smooth={true} duration={1000}>
+              Projects
+            </Link>
+            <Link to="skills" spy={true} smooth={true} duration={1000}>
+              Skills
+            </Link>
+            <Link to="contact" spy={true} smooth={true} duration={1000}>
+              Contact
+            </Link>
+          </ul>
+        </div>
+        <a
+          href="https://github.com/Braulin96"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="slide ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto"
+        >
+          Git Hub
+        </a>
       </div>
     </div>
   );
@@ -87,19 +110,27 @@ const MobileNavbar = () => {
       </div>
       <div
         style={hideMobileNavbar}
-        className="flex flex-col bg-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
+        className="flex flex-col bg-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full z-50"
       >
         <button onClick={() => setShowNavIcon(true)}>
           <IoCloseSharp color="black" size={30} className="ml-auto mt-3 mr-3" />
         </button>
         <ul className="Nav my-auto flex flex-col gap-10 mx-auto text-center text-[#17181c]">
-          <li className="border-b-2 border-primary-green mx-2" onClick={() => setShowNavIcon(true)}>
-            Home
-          </li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contact</li>
+          <Link to="home" onClick={() => setShowNavIcon(true)}>
+            <li className="border-b-2 border-primary-green mx-2">Home</li>
+          </Link>
+          <Link to="aboutMe" onClick={() => setShowNavIcon(true)}>
+            <li className="mx-2">About</li>
+          </Link>
+          <Link to="projectList" onClick={() => setShowNavIcon(true)}>
+            <li className="mx-2">Projects</li>
+          </Link>
+          <Link to="skills" onClick={() => setShowNavIcon(true)}>
+            <li className="mx-2">Skills</li>
+          </Link>
+          <Link to="contact" onClick={() => setShowNavIcon(true)}>
+            <li className="mx-2">Contact</li>
+          </Link>
         </ul>
       </div>
     </>
