@@ -12,14 +12,14 @@ import Robot from "../assets/animation/robot.json";
 const Contact = () => {
   return (
     <div id="contact" style={{ height: "100vh", maxHeight: "1000px" }}>
-      <div className="max-w-7xl my-auto h-full flex sm:flex-row flex-col items-center mx-auto">
-        <div className="flex flex-col px-4 gap-y-12 w-full pt-20 sm:py-0 items-center sm:items-start">
+      <div className="max-w-7xl my-auto h-full flex md:flex-row flex-col items-center mx-auto">
+        <div className="flex flex-col px-4 gap-y-12 w-full pt-20 items-center sm:items-start">
           <FadeOnScroll data="fade" duration="1000" delay="0">
             <p className="lg:text-8xl md:text-7xl text-6xl font-semibold text-primary-gray w-full">
               Contact
             </p>
           </FadeOnScroll>
-          <div className="flex sm:gap-x-20 gap-x-10 sm:justify-center">
+          <div className="flex sm:gap-x-20 gap-x-10 sm:justify-center lg:ml-32 md:ml-24 sm:ml-12 ml-0">
             <FadeOnScroll data="fade" duration="1000" delay="500">
               <a
                 href="https://github.com/Braulin96"
@@ -78,12 +78,12 @@ const Contact = () => {
           </div>
         </div>
         <FadeOnScroll data="fade" duration="1600" delay="1500" offset="400">
-          <div className="flex my-auto sm:mr-12 bg-white  bg-opacity-10 rounded-full p-5 shadow-md sm:mx-0 mx-4 sm:mt-0 mt-8">
+          <div className="flex my-auto md:mr-12 bg-white  bg-opacity-10 rounded-full p-5 shadow-md md:mx-0 mx-4 md:mt-0 mt-8">
             <Lottie
               className="my-auto opacity-80"
               animationData={Robot}
               loop={true}
-              style={{ maxWidth: "600px" }}
+              style={{ maxWidth: "500px"}}
             />
           </div>
         </FadeOnScroll>

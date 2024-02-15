@@ -114,6 +114,7 @@ const ModuleProject = ({
   description,
   liveLink,
   gitHub,
+  ProjectImages,
 }) => {
   return (
     <div className="max-w-7xl flex items-center mx-auto px-4">
@@ -153,11 +154,19 @@ const ModuleProject = ({
 
               <FadeOnScroll data="fade" delay="400" duration="1000">
                 <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
-                  <a className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
+                  <a
+                   href={liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer" className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
                     <p className="font-semibold text-lg">Watch live</p>
                     <GoArrowUpRight size={20} className="my-auto" />
                   </a>
-                  <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
+                  <a
+                    href={gitHub}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer"
+                  >
                     GitHub
                   </a>
                 </div>
@@ -170,7 +179,7 @@ const ModuleProject = ({
         </div>
         <div className="md:flex flex-col hidden my-auto gap-y-20">
           <FadeOnScroll data="fade" delay="2000" duration="1000" offset="600">
-            {TWDImages.map((image) => (
+            {ProjectImages.map((image) => (
               <div
                 key={image.id}
                 className="flex h-full flex-col my-auto items-center justify-center"
@@ -197,8 +206,9 @@ const ProjectsList = () => {
         rule="Front-End Developer"
         description="Multi-brand e-commerce design system for websites and native
                   mobile applications."
-        liveLink="https://www.abola.pt/"
-        gitHub="https://sureshmurali.github.io/"
+        liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
+        gitHub="https://github.com/twd-tech/twd-health"
+        ProjectImages={TWDImages}
       />
       {/* <SwiperProject /> */}
     </div>
