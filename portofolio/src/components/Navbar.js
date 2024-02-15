@@ -1,10 +1,7 @@
 //Note: Hooks:
 import { useState, useEffect } from "react";
 //Note: Components:
-import {
-  Link,
-  animateScroll as scroll,
-} from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import "./Navbar.css";
 //Note: Icons:
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -47,10 +44,10 @@ const DesktopNavbar = () => {
   return (
     <div className="animate-fade-down animate-delay-[6s] animate-duration-[1s]">
       <div
-        className="Nav flex justify-between bg-[#17181c] pt-2"
+        className="flex justify-between bg-[#17181c] pt-2"
         style={hideDesktopNavbar}
       >
-        <div className="flex text-gray-200 justify-end h-12 my-auto">
+        <div className="Nav flex text-gray-200 justify-end h-12 my-auto">
           <ul className="my-auto flex gap-x-14 mt-4 mr-4">
             <Link
               to="home"
@@ -75,9 +72,14 @@ const DesktopNavbar = () => {
             </Link>
           </ul>
         </div>
-        <button className="slide ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto">
+        <a
+          href="https://github.com/Braulin96"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="slide ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto"
+        >
           Git Hub
-        </button>
+        </a>
       </div>
     </div>
   );
