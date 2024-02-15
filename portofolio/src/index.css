@@ -20,32 +20,35 @@ code {
     monospace;
 }
 /* slide used in gitHub button in Navbar*/
-.slide:hover,
-.slide:focus {
-  box-shadow: inset 8.5em 0 0 0 var(--hover);
-}
-
 .slide {
   --color: #00CD8F;
   --hover: #00CD8F;
 }
 
-button.slide {
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 8.5em 0 0 0 var(--hover);
+}
+
+a.slide {
   color: var(--color);
   transition: 0.25s;
 }
-button.slide:hover, button.slide:focus{
+
+a.slide:hover,
+a.slide:focus {
   border-color: var(--hover);
   color: black;
 }
 
-button.slide {
+a.slide {
   background: none;
   border: 2px solid;
   font: inherit;
   line-height: 1;
   margin: 0.5em;
 }
+
 /* fade button used in HeroSection and in projectList*/
 .fade:hover,
 .fade:focus {
