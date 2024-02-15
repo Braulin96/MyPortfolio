@@ -3,11 +3,7 @@ import { useState, useEffect } from "react";
 //Note: Components:
 import {
   Link,
-  Button,
-  Element,
-  Events,
   animateScroll as scroll,
-  scrollSpy,
 } from "react-scroll";
 import "./Navbar.css";
 //Note: Icons:
@@ -56,7 +52,13 @@ const DesktopNavbar = () => {
       >
         <div className="flex text-gray-200 justify-end h-12 my-auto">
           <ul className="my-auto flex gap-x-14 mt-4 mr-4">
-            <Link to="home" className="border-b-2 border-primary-green" spy={true} smooth={true} duration={1000}>
+            <Link
+              to="home"
+              className="border-b-2 border-primary-green"
+              spy={true}
+              smooth={true}
+              duration={1000}
+            >
               Home
             </Link>
             <Link to="aboutMe" spy={true} smooth={true} duration={1000}>
@@ -112,16 +114,21 @@ const MobileNavbar = () => {
           <IoCloseSharp color="black" size={30} className="ml-auto mt-3 mr-3" />
         </button>
         <ul className="Nav my-auto flex flex-col gap-10 mx-auto text-center text-[#17181c]">
-          <li
-            className="border-b-2 border-primary-green mx-2"
-            onClick={() => setShowNavIcon(true)}
-          >
-            Home
-          </li>
-          <li>About</li>
-          <li>Projects</li>
-          <li>Skills</li>
-          <li>Contact</li>
+          <Link to="home" onClick={() => setShowNavIcon(true)}>
+            <li className="border-b-2 border-primary-green mx-2">Home</li>
+          </Link>
+          <Link to="aboutMe" onClick={() => setShowNavIcon(true)}>
+            <li className="mx-2">About</li>
+          </Link>
+          <Link to="projectList" onClick={() => setShowNavIcon(true)}>
+            <li className="mx-2">Projects</li>
+          </Link>
+          <Link to="skills" onClick={() => setShowNavIcon(true)}>
+            <li className="mx-2">Skills</li>
+          </Link>
+          <Link to="contact" onClick={() => setShowNavIcon(true)}>
+            <li className="mx-2">Contact</li>
+          </Link>
         </ul>
       </div>
     </>
