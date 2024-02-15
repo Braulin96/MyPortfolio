@@ -5,8 +5,8 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const HeroSection = () => {
   return (
-    <div>
-      <div style={{ height: "100vh", maxHeight: "1000px" }}>
+  
+      <div id="home" style={{ height: "100vh", maxHeight: "1000px" }}>
         <div className="max-w-7xl mx-auto h-full flex flex-col">
           <div className="my-auto mx-auto text-center flex flex-col gap-y-4">
             <div className="hidden sm:flex">
@@ -118,7 +118,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </div>
+  
   );
 };
 export default HeroSection;

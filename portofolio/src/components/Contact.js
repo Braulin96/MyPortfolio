@@ -10,7 +10,7 @@ import Robot from "../assets/images/robot.json";
 
 const Contact = () => {
   return (
-    <div style={{ height: "100vh", maxHeight: "1000px" }}>
+    <div id="contact" style={{ height: "100vh", maxHeight: "1000px" }}>
       <div className="max-w-7xl my-auto h-full flex sm:flex-row flex-col items-center mx-auto">
         <div className="flex flex-col px-4 gap-y-12 w-full pt-20 sm:py-0">
           <FadeOnScroll data="fade" duration="1000" delay="0">
