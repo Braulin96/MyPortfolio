@@ -110,7 +110,7 @@ const MobileNavbar = () => {
       </div>
       <div
         style={hideMobileNavbar}
-        className="flex flex-col bg-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full"
+        className="flex flex-col bg-white text-xl fixed right-0 w-full sm:w-60 md:w-72 h-full z-50"
       >
         <button onClick={() => setShowNavIcon(true)}>
           <IoCloseSharp color="black" size={30} className="ml-auto mt-3 mr-3" />
