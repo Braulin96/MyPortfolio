@@ -1,7 +1,15 @@
 //Note: Hooks:
 import { useState, useEffect } from "react";
 //Note: Components:
-import './Navbar.css'
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
+import "./Navbar.css";
 //Note: Icons:
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoCloseSharp } from "react-icons/io5";
@@ -42,21 +50,32 @@ const DesktopNavbar = () => {
   };
   return (
     <div className="animate-fade-down animate-delay-[6s] animate-duration-[1s]">
-    <div className="Nav flex justify-between bg-[#17181c] pt-2" style={hideDesktopNavbar}>
-      <div className="flex text-gray-200 justify-end h-12 my-auto">
-        <ul className="my-auto flex gap-x-14 mt-4 mr-4">
-          <li className="border-b-2 border-primary-green">
-            Home
-          </li>
-          <li >About</li>
-          <li >Projects</li>
-          <li>Skills</li>
-          <li >Contact</li>
-        </ul>
-      </div>
-      <button className="slide ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto">
-        Git Hub
-      </button>
+      <div
+        className="Nav flex justify-between bg-[#17181c] pt-2"
+        style={hideDesktopNavbar}
+      >
+        <div className="flex text-gray-200 justify-end h-12 my-auto">
+          <ul className="my-auto flex gap-x-14 mt-4 mr-4">
+            <Link to="home" className="border-b-2 border-primary-green" spy={true} smooth={true} duration={1000}>
+              Home
+            </Link>
+            <Link to="aboutMe" spy={true} smooth={true} duration={1000}>
+              About
+            </Link>
+            <Link to="projectList" spy={true} smooth={true} duration={1000}>
+              Projects
+            </Link>
+            <Link to="skills" spy={true} smooth={true} duration={1000}>
+              Skills
+            </Link>
+            <Link to="contact" spy={true} smooth={true} duration={1000}>
+              Contact
+            </Link>
+          </ul>
+        </div>
+        <button className="slide ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto">
+          Git Hub
+        </button>
       </div>
     </div>
   );
@@ -93,7 +112,10 @@ const MobileNavbar = () => {
           <IoCloseSharp color="black" size={30} className="ml-auto mt-3 mr-3" />
         </button>
         <ul className="Nav my-auto flex flex-col gap-10 mx-auto text-center text-[#17181c]">
-          <li className="border-b-2 border-primary-green mx-2" onClick={() => setShowNavIcon(true)}>
+          <li
+            className="border-b-2 border-primary-green mx-2"
+            onClick={() => setShowNavIcon(true)}
+          >
             Home
           </li>
           <li>About</li>
