@@ -60,17 +60,17 @@ a.slide {
   --color: black;
   --hover: #17181c;
 }
-button.fade {
+a.fade {
   color: var(--color);
   transition: 0.25s;
 }
 
-button.fade:hover, button.slide:fade{
+a.fade:hover, button.slide:fade{
   border-color: var(--hover);
   color: #00CD8F;
 }
 
-button.fade {
+a.fade {
   background: #00CD8F;
   border: 2px solid #00CD8F;
   font: inherit;
