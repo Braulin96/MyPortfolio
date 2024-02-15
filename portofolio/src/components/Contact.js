@@ -18,7 +18,6 @@ const Contact = () => {
               Contact
             </p>
           </FadeOnScroll>
-
           <div className="flex sm:gap-x-20 gap-x-10 sm:justify-center">
             <FadeOnScroll data="fade" duration="1000" delay="500">
               <FaGithub size={50} color="#EEEEEE" />
