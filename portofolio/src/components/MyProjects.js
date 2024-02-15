@@ -1,4 +1,6 @@
+//Note: component:
 import FadeOnScroll from "./shared/FadeOnScroll";
+
 const MyProjects = () => {
   return (
     <div id="myProjects" style={{ height: "100vh", maxHeight: "1000px" }}>
@@ -6,7 +8,7 @@ const MyProjects = () => {
         <div className="lg:flex items-center justify-center mx-auto px-4">
           <div className="order-last">
             <FadeOnScroll data="fade" duration="1000" delay="0">
-              <p className="sm:text-8xl text-6xl font-semibold text-primary-gray lg:leading-tight leading-none ">
+              <p className="sm:text-8xl text-6xl font-semibold text-secondary-gray lg:leading-tight leading-none ">
                 My
                 <br />
                 Projects

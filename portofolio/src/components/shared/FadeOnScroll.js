@@ -1,4 +1,4 @@
-// Note: hooks:
+// Note: hooks
 import { useEffect } from "react";
 // Note: components:
 import AOS from "aos";

@@ -1,4 +1,4 @@
-//Note: hooks:
+//Note: hooks
 import { useRef } from "react";
 //Note: components:
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -127,7 +127,7 @@ const ModuleProject = ({
           <div className="my-auto text-white font-light">
             <FadeOnScroll data="fade" delay="0" duration="1000">
               <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
-                <p className="mx-auto text-lg text-[#17181c]">{number}</p>
+                <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
             </FadeOnScroll>
             <div className="flex flex-col md:py-28 py-0">

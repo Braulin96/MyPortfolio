@@ -1,12 +1,13 @@
 //Note : Components
 import Lottie from "lottie-react";
 import FadeOnScroll from "./shared/FadeOnScroll";
-//Note : Icons:
+//Note : Icons
 import { FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
-import Robot from "../assets/images/robot.json";
+//Note: Lottie
+import Robot from "../assets/animation/robot.json";
 
 const Contact = () => {
   return (
@@ -14,7 +15,7 @@ const Contact = () => {
       <div className="max-w-7xl my-auto h-full flex sm:flex-row flex-col items-center mx-auto">
         <div className="flex flex-col px-4 gap-y-12 w-full pt-20 sm:py-0 items-center sm:items-start">
           <FadeOnScroll data="fade" duration="1000" delay="0">
-            <p className="lg:text-8xl md:text-7xl text-6xl font-semibold text-white w-full">
+            <p className="lg:text-8xl md:text-7xl text-6xl font-semibold text-primary-gray w-full">
               Contact
             </p>
           </FadeOnScroll>

@@ -4,7 +4,7 @@ import { Link, animateScroll as scroll } from "react-scroll";
 //Note : Icon:
 import { GoArrowUpRight } from "react-icons/go";
 //Note: pdf
-import Curriculo from "../assets/documents/curriculo.pdf"
+import Curriculum from "../assets/documents/curriculum.pdf"
 
 const HeroSection = () => {
   return (
@@ -56,47 +56,6 @@ const HeroSection = () => {
               />
             </div>
             <div className="sm:hidden flex flex-col">
-              {/* <TypeIt
-                getBeforeInit={(instance) => {
-                  instance
-                    .type(
-                      '<span class="text-8xl text-secondary-blue font-extralight" style="font-family: Allura, cursive;">Braulin Piress</span>',
-                      { speed: 10 }
-                    ) // First text with default speed
-                    .pause(750)
-                    .delete(1)
-                    .pause(750)
-
-                    .break({ delay: 500 })
-                    .type(
-                      '<span class="text-3xl text-secondary-gray font-extralight">Front-Ennd Developer</span>',
-                      {
-                        speed: 100,
-                      }
-                    )
-                    .pause(750)
-                    .move(-11)
-                    .pause(750)
-                    .delete(1)
-                    .pause(750)
-                    .move(null, { to: "END" })
-                    .pause(750)
-                    .break({ delay: 500 })
-                    .type(
-                      '<span class="text-3xl text-secondary-gray font-extralight">Web Designer</span>',
-                      {
-                        speed: 100,
-                      }
-                    )
-                    .pause(750)
-                    .exec(() => {
-                      // Hide cursor when typing animation is complete
-                      document.querySelector(".ti-cursor").style.display = "none";
-                    });
-
-                  return instance;
-                }}
-              /> */}
               <p
                 className="text-8xl text-white font-extralight"
                 style={{ fontFamily: "Allura, cursive" }}
@@ -109,7 +68,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2 animate-fade-up animate-delay-[7s] animate-duration-[1s]">
-            <a href={Curriculo} target="_blank" className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
+            <a href={Curriculum} target="_blank" className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
               <p className="font-semibold text-lg">Resume</p>
               <GoArrowUpRight size={20} className="my-auto" />
             </a>

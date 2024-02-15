@@ -1,4 +1,6 @@
-import React, { useRef, useEffect } from "react";
+//Note: hooks
+import { useRef, useEffect } from "react";
+//Note: components
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CSSRulePlugin from "gsap/CSSRulePlugin";
@@ -45,5 +47,4 @@ const GsapAnimation = ({ children }) => {
     </section>
   );
 };
-
 export default GsapAnimation;

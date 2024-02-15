@@ -1,3 +1,4 @@
+//Note:component
 import { Tilt } from "react-tilt";
 
 const defaultOptions = {
