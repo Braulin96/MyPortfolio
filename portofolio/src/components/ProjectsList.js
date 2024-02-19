@@ -92,6 +92,7 @@ const SlideCarousel = ({ projectImages }) => {
             <img
               className="h-full mx-auto mb-4 rounded-md"
               //width={400}
+              style={{height:"225px",}}
               src={image.src}
               alt={image.alt}
             />
