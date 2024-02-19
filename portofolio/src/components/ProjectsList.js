@@ -146,36 +146,24 @@ const ModuleProject = ({
             top: 0,
           }}
         >
-          <div className="my-auto text-white font-light">
-            <FadeOnScroll data="fade" delay="0" duration="1000">
+          <FadeOnScroll data="fade" delay="200" duration="1000">
+            <div className="my-auto text-white font-light">
               <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
                 <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
-            </FadeOnScroll>
-            <div className="flex flex-col md:py-28 py-0">
-              <FadeOnScroll data="fade" delay="100" duration="1000">
+              <div className="flex flex-col md:py-28 py-0">
                 <p className="text-5xl ml-4">{projectName}</p>
-              </FadeOnScroll>
-              <FadeOnScroll data="fade" delay="200" duration="1000">
                 <div className="flex mt-12">
                   <BsDot className="my-auto" size={30} color="#9EABA2" />
                   <p className="text-3xl my-auto ">{rule}</p>
                 </div>
-              </FadeOnScroll>
-              <FadeOnScroll data="fade" delay="300" duration="1000">
                 <p className="ml-4 mt-4 text-xl">{description}</p>
-              </FadeOnScroll>
-
-              <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
-                <FadeOnScroll data="fade" delay="400" duration="1000">
+                <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
                   <SlideCarousel projectImages={projectImages} />
                   <p className="text-sm mt-8 underline flex md:hidden">
                     React App
                   </p>
-                </FadeOnScroll>
-              </div>
-
-              <FadeOnScroll data="fade" delay="400" duration="1000">
+                </div>
                 <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
                   <a
                     href={liveLink}
@@ -195,15 +183,13 @@ const ModuleProject = ({
                     GitHub
                   </a>
                 </div>
-              </FadeOnScroll>
-            </div>
-            <FadeOnScroll data="fade" delay="1200" duration="500" offset="10">
+              </div>
               <p className="text-xl underline md:flex hidden">React App</p>
-            </FadeOnScroll>
-          </div>
+            </div>
+          </FadeOnScroll>
         </div>
         <div className="md:flex flex-col hidden my-auto gap-y-20 w-full">
-          <FadeOnScroll data="fade" delay="2000" duration="1000" offset="600">
+          <FadeOnScroll data="fade" delay="400" duration="1000" offset="600">
             {projectImages.map((image) => (
               <div
                 key={image.id}

@@ -74,7 +74,7 @@ const HeroSection = () => {
             target="_blank"
             className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
           >
-            <p className="font-semibold text-lg text-secondary-blue">Resume</p>
+            <p className="font-semibold text-lg">Resume</p>
             <GoArrowUpRight size={20} className="my-auto" />
           </a>
           <Link
