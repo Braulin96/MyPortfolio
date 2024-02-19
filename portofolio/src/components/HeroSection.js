@@ -1,6 +1,6 @@
 //Note; Components:
 import TypeIt from "typeit-react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 //Note : Icon:
 import { GoArrowUpRight } from "react-icons/go";
 //Note: pdf
@@ -72,6 +72,7 @@ const HeroSection = () => {
           <a
             href={Curriculum}
             target="_blank"
+            rel="noopener noreferrer"
             className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
           >
             <p className="font-semibold text-lg">Resume</p>
