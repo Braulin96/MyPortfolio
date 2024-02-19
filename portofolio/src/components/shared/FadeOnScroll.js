@@ -1,4 +1,4 @@
-// Note: hooks:
+// Note: hooks
 import { useEffect } from "react";
 // Note: components:
 import AOS from "aos";
@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 const FadeOnScroll = ({ data,duration, delay, children, offset }) => {
   useEffect(() => {
     AOS.init({
-      disable: "phone",
+      //disable: "phone",
     });
   }, []);
     const offsetValue = offset || 200;

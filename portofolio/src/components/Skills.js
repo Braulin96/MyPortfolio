@@ -1,11 +1,13 @@
+//Note: component
 import FadeOnScroll from "./shared/FadeOnScroll";
+
 const Skills = () => {
   return (
     <div id="skills" style={{ height: "100vh", maxHeight: "1000px" }}>
       <div className="max-w-7xl h-full flex mx-auto">
         <div className="lg:flex items-center w-full px-4 justify-center my-auto">
           <FadeOnScroll data="fade" delay="0" duration="1000">
-            <p className="sm:text-8xl text-6xl font-semibold text-primary-gray">
+            <p className="sm:text-8xl text-6xl font-semibold text-secondary-gray">
               Skills
             </p>
           </FadeOnScroll>

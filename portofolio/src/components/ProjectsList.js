@@ -1,4 +1,4 @@
-//Note: hooks:
+//Note: hooks
 import { useRef } from "react";
 //Note: components:
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,30 +11,49 @@ import {
   EffectCube,
 } from "swiper/modules";
 import "swiper/css/bundle";
-import "swiper/css/effect-cube";
-import "swiper/css/navigation";
 import TiltAnimation from "./shared/TiltAnimation";
 import FadeOnScroll from "./shared/FadeOnScroll";
-
 //Note:images/icons:
 import { BsDot } from "react-icons/bs";
-import LaptopTWD from "assets/images/laptopTWD.png";
-import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi2";
+//------Dashboard TWD
+import HeroSectionTWD from "../assets/images/dashboardTWD/homeTWD.jpeg";
+import ClinicTWD from "../assets/images/dashboardTWD/clinicTWD.jpeg";
+import LifestyleTWD from "../assets/images/dashboardTWD/lifestyleTWD.jpeg";
+//---Website TWD
+import HeroSectionTWDWeb from "assets/images/webTWD/homeTWDWeb.png";
+import HealthTWDWeb from "assets/images/webTWD/healthTWDWeb.png";
+import StaffTWDWeb from "assets/images/webTWD/staffTWDWeb.png";
+//---RosaCleaning
+import HeroSectionRosa from "../assets/images/rosaCleaning/heroSectionRosa.png";
+import PriceRosa from "../assets/images/rosaCleaning/priceRosa.png";
+import StepsRosa from "../assets/images/rosaCleaning/stepsRosa.png";
 
-const TWDImages = [
-  { id: 1, src: SecondLaptop, alt: "Laptop version TWD" },
-  { id: 2, src: LaptopTWD, alt: "Laptop version TWD" },
-  { id: 3, src: SecondLaptop, alt: "Laptop version TWD" },
+const DashboardTWD = [
+  { id: 1, src: HeroSectionTWD, alt: "Hero section TWD" },
+  { id: 2, src: ClinicTWD, alt: "Clinic TWD" },
+  { id: 3, src: LifestyleTWD, alt: "Lifestyle TWD" },
 ];
 
-const SlideCarousel = () => {
+const TWDWeb = [
+  { id: 1, src: HeroSectionTWDWeb, alt: "Hero section website TWD" },
+  { id: 2, src: HealthTWDWeb, alt: "Health website TWD" },
+  { id: 3, src: StaffTWDWeb, alt: "Staff website TWD" },
+];
+
+const RosaCleaning = [
+  { id: 1, src: HeroSectionRosa, alt: "Hero section RosaCleaning" },
+  { id: 2, src: PriceRosa, alt: "Pricing RosaCleaning" },
+  { id: 3, src: StepsRosa, alt: "Steps RosaCleaning" },
+];
+
+const SlideCarousel = ({ projectImages }) => {
   const swiperRef = useRef();
   return (
     <div
-      className="w-fit relative"
+      className="w-fit relative sm:px-20"
       style={{ maxWidth: "calc(100w - 10px)", width: "calc(100vw - 2rem)" }}
     >
       <Swiper
@@ -68,11 +87,12 @@ const SlideCarousel = () => {
           swiperRef.current = swiper;
         }}
       >
-        {TWDImages.map((image) => (
+        {projectImages.map((image) => (
           <SwiperSlide className="mx-auto w-full flex mb-4" key={image.id}>
             <img
-              className="h-full mx-auto mb-4"
+              className="h-full mx-auto mb-4 rounded-md"
               //width={400}
+              //style={{ height: "225px" }}
               src={image.src}
               alt={image.alt}
             />
@@ -114,6 +134,8 @@ const ModuleProject = ({
   description,
   liveLink,
   gitHub,
+  show,
+  projectImages,
 }) => {
   return (
     <div className="max-w-7xl flex items-center mx-auto px-4">
@@ -127,7 +149,7 @@ const ModuleProject = ({
           <div className="my-auto text-white font-light">
             <FadeOnScroll data="fade" delay="0" duration="1000">
               <div className="bg-[#F5F5F5] rounded-full w-10 aspect-square md:flex hidden items-center border-2">
-                <p className="mx-auto text-lg text-[#17181c]">{number}</p>
+                <p className="mx-auto text-lg text-secondary-blue">{number}</p>
               </div>
             </FadeOnScroll>
             <div className="flex flex-col md:py-28 py-0">
@@ -145,19 +167,31 @@ const ModuleProject = ({
               </FadeOnScroll>
 
               <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
-                <SlideCarousel />
-                <p className="text-sm mt-8 underline flex md:hidden">
-                  React App
-                </p>
+                <FadeOnScroll data="fade" delay="400" duration="1000">
+                  <SlideCarousel projectImages={projectImages} />
+                  <p className="text-sm mt-8 underline flex md:hidden">
+                    React App
+                  </p>
+                </FadeOnScroll>
               </div>
 
               <FadeOnScroll data="fade" delay="400" duration="1000">
                 <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
-                  <a className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
-                    <p className="font-semibold text-lg">Watch live</p>
+                  <a
+                    href={liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
+                  >
+                    <p className="font-semibold text-lg">{show}</p>
                     <GoArrowUpRight size={20} className="my-auto" />
                   </a>
-                  <a className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer">
+                  <a
+                    href={gitHub}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="secondaryButton my-auto px-2 text-white hover:opacity-90 text-lg cursor-pointer"
+                  >
                     GitHub
                   </a>
                 </div>
@@ -168,16 +202,21 @@ const ModuleProject = ({
             </FadeOnScroll>
           </div>
         </div>
-        <div className="md:flex flex-col hidden my-auto gap-y-20">
+        <div className="md:flex flex-col hidden my-auto gap-y-20 w-full">
           <FadeOnScroll data="fade" delay="2000" duration="1000" offset="600">
-            {TWDImages.map((image) => (
+            {projectImages.map((image) => (
               <div
                 key={image.id}
                 className="flex h-full flex-col my-auto items-center justify-center"
                 style={{ height: "100vh" }}
               >
                 <TiltAnimation>
-                  <img src={image.src} alt={image.alt} />
+                  <img
+                    className="rounded-xl"
+                    width={800}
+                    src={image.src}
+                    alt={image.alt}
+                  />
                 </TiltAnimation>
               </div>
             ))}
@@ -190,15 +229,37 @@ const ModuleProject = ({
 
 const ProjectsList = () => {
   return (
-    <div id="projectList">
+    <div id="projectList" className="flex flex-col sm:gap-y-0 gap-y-24">
       <ModuleProject
         number="01"
         projectName="Dashboard TWD"
         rule="Front-End Developer"
+        description="The Wellbeing Doctors' dashboard facilitates the creation of personalized action plans for users, alongside features for tracking health progress and accessing various health resources."
+        show="Watch live"
+        liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
+        gitHub="https://github.com/twd-tech/twd-health"
+        projectImages={DashboardTWD}
+      />
+      <ModuleProject
+        number="02"
+        projectName="TWD Website"
+        rule="Front-End Developer - Web Designer"
+        description="Multi-brand e-commerce design system for websites and native mobile applications."
+        show="Watch live"
+        liveLink="https://thewellbeingdoctors.com/"
+        gitHub="https://github.com/twd-tech/website"
+        projectImages={TWDWeb}
+      />
+      <ModuleProject
+        number="03"
+        projectName="Rosa Cleaning"
+        rule="Front-End Developer - Web Designer"
         description="Multi-brand e-commerce design system for websites and native
                   mobile applications."
-        liveLink="https://www.abola.pt/"
-        gitHub="https://sureshmurali.github.io/"
+        show="Figma"
+        liveLink="https://www.figma.com/proto/uGHdoF52BopWJxx44cr3wR/Untitled?type=design&node-id=564-461&t=ulYqSWCH6enl6Qa7-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=544%3A536&mode=design"
+        gitHub="https://github.com/Braulin96/RosaCleaning"
+        projectImages={RosaCleaning}
       />
       {/* <SwiperProject /> */}
     </div>

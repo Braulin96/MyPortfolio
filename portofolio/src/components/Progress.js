@@ -1,4 +1,4 @@
-//Note: components:
+//Note: components
 import TypeIt from "typeit-react";
 import TiltAnimation from "./shared/TiltAnimation";
 import FadeOnScroll from "./shared/FadeOnScroll";
@@ -87,7 +87,7 @@ const Progress = () => {
             </TiltAnimation>
           </div>
           <FadeOnScroll data="fade" duration="1500" delay="500">
-          <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-white lg:leading-tight leading-none md:ml-8">
+          <p className="lg:text-8xl md:text-7xl text-6xl font-bold text-primary-gray lg:leading-tight leading-none md:ml-8">
             Slow Progress is better than no progress
           </p>
           </FadeOnScroll>

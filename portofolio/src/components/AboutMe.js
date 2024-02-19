@@ -1,3 +1,4 @@
+//Note: component
 import FadeOnScroll from "./shared/FadeOnScroll";
 
 const AboutMe = () => {
@@ -6,7 +7,7 @@ const AboutMe = () => {
       <div className="max-w-7xl h-full flex items-center justify-center mx-auto ">
         <div className="lg:flex items-center justify-center mx-auto px-4">
         <FadeOnScroll data="fade" duration="1000" delay="0">
-          <p className="sm:text-8xl text-6xl font-semibold text-primary-gray  lg:leading-tight leading-none">
+          <p className="sm:text-8xl text-6xl font-semibold text-secondary-gray  lg:leading-tight leading-none lg:mr-12">
             About
             <br />
             Me

@@ -44,7 +44,7 @@ const DesktopNavbar = () => {
   return (
     <div className="animate-fade-down animate-delay-[6s] animate-duration-[1s]">
       <div
-        className="flex justify-between bg-[#17181c] pt-2"
+        className="flex justify-between bg-secondary-blue pt-2"
         style={hideDesktopNavbar}
       >
         <div className="Nav flex text-gray-200 justify-end h-12 my-auto">
