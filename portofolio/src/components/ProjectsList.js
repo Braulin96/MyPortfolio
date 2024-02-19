@@ -141,7 +141,7 @@ const ModuleProject = ({
     <div className="max-w-7xl flex items-center mx-auto px-4">
       <div className="flex h-full gap-x-12">
         <div
-          className="flex flex-col gap-y-20 md:sticky  md:h-[100vh]"
+          className="flex flex-col gap-y-20 md:sticky  md:h-[100vh] w-full"
           style={{
             top: 0,
           }}
@@ -244,7 +244,7 @@ const ProjectsList = () => {
         number="02"
         projectName="TWD Website"
         rule="Front-End Developer - Web Designer"
-        description="Multi-brand e-commerce design system for websites and native mobile applications."
+        description="The Wellbeing Doctors' website provides comprehensive information about the services offered, including details on pricing, health improvement strategies, getting started, partnerships, and testimonials."
         show="Watch live"
         liveLink="https://thewellbeingdoctors.com/"
         gitHub="https://github.com/twd-tech/website"
@@ -254,8 +254,7 @@ const ProjectsList = () => {
         number="03"
         projectName="Rosa Cleaning"
         rule="Front-End Developer - Web Designer"
-        description="Multi-brand e-commerce design system for websites and native
-                  mobile applications."
+        description="Rosa Cleaning's website offers a comprehensive platform for cleaning services, enabling users to schedule appointments, and customize cleaning plans."
         show="Figma"
         liveLink="https://www.figma.com/proto/uGHdoF52BopWJxx44cr3wR/Untitled?type=design&node-id=564-461&t=ulYqSWCH6enl6Qa7-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=544%3A536&mode=design"
         gitHub="https://github.com/Braulin96/RosaCleaning"
