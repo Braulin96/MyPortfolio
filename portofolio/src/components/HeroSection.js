@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 //Note : Icon:
 import { GoArrowUpRight } from "react-icons/go";
 //Note: pdf
-import Curriculum from "../assets/documents/curriculum.pdf";
+import Curriculum from "assets/documents/curriculum.pdf";
 
 const HeroSection = () => {
   return (
