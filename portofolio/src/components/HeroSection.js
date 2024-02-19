@@ -68,7 +68,7 @@ const HeroSection = () => {
             </p>
           </div>
         </div>
-        <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2 animate-fade-up animate-delay-[7s] animate-duration-[1s]">
+        <div className="bg-white bg-opacity-5 px-4 w-fit mx-auto rounded-full flex mb-12 gap-x-2 animate-fade-up sm:animate-delay-[7s] animate-duration-[1s] animate-delay-[1s]">
           <a
             href={Curriculum}
             target="_blank"
