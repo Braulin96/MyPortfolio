@@ -225,7 +225,7 @@ const ModuleProject = ({
 
 const ProjectsList = () => {
   return (
-    <div id="projectList">
+    <div id="projectList" className="flex flex-col sm:gap-y-0 gap-y-24">
       <ModuleProject
         number="01"
         projectName="Dashboard TWD"
