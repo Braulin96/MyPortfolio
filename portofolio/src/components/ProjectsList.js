@@ -254,7 +254,7 @@ const ProjectsList = () => {
         number="03"
         projectName="Rosa Cleaning"
         rule="Front-End Developer - Web Designer"
-        description="Rosa Cleaning's website offers a comprehensive platform for cleaning services, enabling users to schedule appointments, and customize cleaning plans."
+        description="Rosa Cleaning's website offers a comprehensive platform for cleaning services, enabling users to schedule appointments, and customize cleaning plans (not live yet)."
         show="Figma"
         liveLink="https://www.figma.com/proto/uGHdoF52BopWJxx44cr3wR/Untitled?type=design&node-id=564-461&t=ulYqSWCH6enl6Qa7-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=544%3A536&mode=design"
         gitHub="https://github.com/Braulin96/RosaCleaning"
