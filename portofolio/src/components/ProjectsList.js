@@ -22,34 +22,40 @@ import { GoArrowUpRight } from "react-icons/go";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi2";
 
-
 //Dashboard TWD
-import ClinicTWD from "../assets/images/dashboardTWD/clinicTWD.jpeg"
-import HomeTWD from "../assets/images/dashboardTWD/homeTWD.jpeg"
-import LifestyleTWD from "../assets/images/dashboardTWD/lifestyleTWD.jpeg"
+import HeroSectionTWD from "../assets/images/dashboardTWD/homeTWD.jpeg";
+import ClinicTWD from "../assets/images/dashboardTWD/clinicTWD.jpeg";
+import LifestyleTWD from "../assets/images/dashboardTWD/lifestyleTWD.jpeg";
 
 //Website TWD
+import HeroSectionTWDWeb from "assets/images/webTWD/homeTWDWeb.png";
 import HealthTWDWeb from "assets/images/webTWD/healthTWDWeb.png";
-import HomeTWDWeb from "assets/images/webTWD/homeTWDWeb.png";
 import StaffTWDWeb from "assets/images/webTWD/staffTWDWeb.png";
 
 //RosaCleaning
-import HeroSectionRosa from "../assets/images/rosaCleaning/heroSectionRosa.png"
-import PriceRosa from "../assets/images/rosaCleaning/priceRosa.png"
-import StepsRosa from "../assets/images/rosaCleaning/stepsRosa.png"
-
-
-
+import HeroSectionRosa from "../assets/images/rosaCleaning/heroSectionRosa.png";
+import PriceRosa from "../assets/images/rosaCleaning/priceRosa.png";
+import StepsRosa from "../assets/images/rosaCleaning/stepsRosa.png";
 
 const DashboardTWD = [
+  { id: 1, src: HeroSectionTWD , alt: "Laptop version TWD" },
+  { id: 2, src: ClinicTWD, alt: "Laptop version TWD" },
+  { id: 3, src: LifestyleTWD, alt: "Laptop version TWD" },
+];
+
+const TWDWeb = [
+  { id: 1, src: HeroSectionTWDWeb, alt: "Laptop version TWD" },
+  { id: 2, src: HealthTWDWeb, alt: "Laptop version TWD" },
+  { id: 3, src: StaffTWDWeb, alt: "Laptop version TWD" },
+];
+
+const RosaCleaning = [
   { id: 1, src: HeroSectionRosa, alt: "Laptop version TWD" },
   { id: 2, src: PriceRosa, alt: "Laptop version TWD" },
   { id: 3, src: StepsRosa, alt: "Laptop version TWD" },
 ];
 
-
-
-const SlideCarousel = ( ) => {
+const SlideCarousel = () => {
   const swiperRef = useRef();
   return (
     <div
@@ -235,6 +241,26 @@ const ProjectsList = () => {
         liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
         gitHub="https://github.com/twd-tech/twd-health"
         ProjectImages={DashboardTWD}
+      />
+       <ModuleProject
+        number="02"
+        projectName="TWD Website"
+        rule="Front-End Developer - Web Designer"
+        description="Multi-brand e-commerce design system for websites and native
+                  mobile applications."
+        liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
+        gitHub="https://github.com/twd-tech/twd-health"
+        ProjectImages={TWDWeb}
+      />
+        <ModuleProject
+        number="03"
+        projectName="Rosa Cleaning"
+        rule="Front-End Developer - Web Designer"
+        description="Multi-brand e-commerce design system for websites and native
+                  mobile applications."
+        liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
+        gitHub="https://github.com/twd-tech/twd-health"
+        ProjectImages={RosaCleaning}
       />
       {/* <SwiperProject /> */}
     </div>
