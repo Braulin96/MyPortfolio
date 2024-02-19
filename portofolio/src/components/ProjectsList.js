@@ -92,7 +92,7 @@ const SlideCarousel = ({ projectImages }) => {
             <img
               className="h-full mx-auto mb-4 rounded-md"
               //width={400}
-              style={{height:"225px",}}
+              //style={{ height: "225px" }}
               src={image.src}
               alt={image.alt}
             />
@@ -134,6 +134,7 @@ const ModuleProject = ({
   description,
   liveLink,
   gitHub,
+  show,
   projectImages,
 }) => {
   return (
@@ -182,7 +183,7 @@ const ModuleProject = ({
                     rel="noopener noreferrer"
                     className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
                   >
-                    <p className="font-semibold text-lg">Watch live</p>
+                    <p className="font-semibold text-lg">{show}</p>
                     <GoArrowUpRight size={20} className="my-auto" />
                   </a>
                   <a
@@ -201,7 +202,7 @@ const ModuleProject = ({
             </FadeOnScroll>
           </div>
         </div>
-        <div className="md:flex flex-col hidden my-auto gap-y-20">
+        <div className="md:flex flex-col hidden my-auto gap-y-20 w-full">
           <FadeOnScroll data="fade" delay="2000" duration="1000" offset="600">
             {projectImages.map((image) => (
               <div
@@ -233,8 +234,8 @@ const ProjectsList = () => {
         number="01"
         projectName="Dashboard TWD"
         rule="Front-End Developer"
-        description="Multi-brand e-commerce design system for websites and native
-                  mobile applications."
+        description="The Wellbeing Doctors' dashboard facilitates the creation of personalized action plans for users, alongside features for tracking health progress and accessing various health resources."
+        show="Watch live"
         liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
         gitHub="https://github.com/twd-tech/twd-health"
         projectImages={DashboardTWD}
@@ -243,10 +244,10 @@ const ProjectsList = () => {
         number="02"
         projectName="TWD Website"
         rule="Front-End Developer - Web Designer"
-        description="Multi-brand e-commerce design system for websites and native
-                  mobile applications."
-        liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
-        gitHub="https://github.com/twd-tech/twd-health"
+        description="Multi-brand e-commerce design system for websites and native mobile applications."
+        show="Watch live"
+        liveLink="https://thewellbeingdoctors.com/"
+        gitHub="https://github.com/twd-tech/website"
         projectImages={TWDWeb}
       />
       <ModuleProject
@@ -255,8 +256,9 @@ const ProjectsList = () => {
         rule="Front-End Developer - Web Designer"
         description="Multi-brand e-commerce design system for websites and native
                   mobile applications."
-        liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
-        gitHub="https://github.com/twd-tech/twd-health"
+        show="Figma"
+        liveLink="https://www.figma.com/proto/uGHdoF52BopWJxx44cr3wR/Untitled?type=design&node-id=564-461&t=ulYqSWCH6enl6Qa7-1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=544%3A536&mode=design"
+        gitHub="https://github.com/Braulin96/RosaCleaning"
         projectImages={RosaCleaning}
       />
       {/* <SwiperProject /> */}
