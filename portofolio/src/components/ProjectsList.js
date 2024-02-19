@@ -18,19 +18,38 @@ import FadeOnScroll from "./shared/FadeOnScroll";
 
 //Note:images/icons:
 import { BsDot } from "react-icons/bs";
-import LaptopTWD from "assets/images/laptopTWD.png";
-import SecondLaptop from "assets/images/laptopTWDnoBorder.png";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi2";
 
-const TWDImages = [
-  { id: 1, src: SecondLaptop, alt: "Laptop version TWD" },
-  { id: 2, src: LaptopTWD, alt: "Laptop version TWD" },
-  { id: 3, src: SecondLaptop, alt: "Laptop version TWD" },
+
+//Dashboard TWD
+import ClinicTWD from "../assets/images/dashboardTWD/clinicTWD.jpeg"
+import HomeTWD from "../assets/images/dashboardTWD/homeTWD.jpeg"
+import LifestyleTWD from "../assets/images/dashboardTWD/lifestyleTWD.jpeg"
+
+//Website TWD
+import HealthTWDWeb from "assets/images/webTWD/healthTWDWeb.png";
+import HomeTWDWeb from "assets/images/webTWD/homeTWDWeb.png";
+import StaffTWDWeb from "assets/images/webTWD/staffTWDWeb.png";
+
+//RosaCleaning
+import HeroSectionRosa from "../assets/images/rosaCleaning/heroSectionRosa.png"
+import PriceRosa from "../assets/images/rosaCleaning/priceRosa.png"
+import StepsRosa from "../assets/images/rosaCleaning/stepsRosa.png"
+
+
+
+
+const DashboardTWD = [
+  { id: 1, src: HeroSectionRosa, alt: "Laptop version TWD" },
+  { id: 2, src: PriceRosa, alt: "Laptop version TWD" },
+  { id: 3, src: StepsRosa, alt: "Laptop version TWD" },
 ];
 
-const SlideCarousel = () => {
+
+
+const SlideCarousel = ( ) => {
   const swiperRef = useRef();
   return (
     <div
@@ -68,10 +87,10 @@ const SlideCarousel = () => {
           swiperRef.current = swiper;
         }}
       >
-        {TWDImages.map((image) => (
+        {DashboardTWD.map((image) => (
           <SwiperSlide className="mx-auto w-full flex mb-4" key={image.id}>
             <img
-              className="h-full mx-auto mb-4"
+              className="h-full mx-auto mb-4 rounded-xl"
               //width={400}
               src={image.src}
               alt={image.alt}
@@ -155,9 +174,11 @@ const ModuleProject = ({
               <FadeOnScroll data="fade" delay="400" duration="1000">
                 <div className="bg-white bg-opacity-5 px-4 w-fit rounded-full flex mb-12 gap-x-2 md:mt-12 mt-6 md:mx-0 mx-auto">
                   <a
-                   href={liveLink}
+                    href={liveLink}
                     target="_blank"
-                    rel="noopener noreferrer" className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex">
+                    rel="noopener noreferrer"
+                    className="fade ml-4 cursor-pointer px-6 py-1.5 rounded-full my-auto flex"
+                  >
                     <p className="font-semibold text-lg">Watch live</p>
                     <GoArrowUpRight size={20} className="my-auto" />
                   </a>
@@ -186,7 +207,12 @@ const ModuleProject = ({
                 style={{ height: "100vh" }}
               >
                 <TiltAnimation>
-                  <img src={image.src} alt={image.alt} />
+                  <img
+                    className="rounded-xl"
+                    width={800}
+                    src={image.src}
+                    alt={image.alt}
+                  />
                 </TiltAnimation>
               </div>
             ))}
@@ -208,7 +234,7 @@ const ProjectsList = () => {
                   mobile applications."
         liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
         gitHub="https://github.com/twd-tech/twd-health"
-        ProjectImages={TWDImages}
+        ProjectImages={DashboardTWD}
       />
       {/* <SwiperProject /> */}
     </div>
