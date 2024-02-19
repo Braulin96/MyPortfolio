@@ -32,7 +32,7 @@ import PriceRosa from "../assets/images/rosaCleaning/priceRosa.png";
 import StepsRosa from "../assets/images/rosaCleaning/stepsRosa.png";
 
 const DashboardTWD = [
-  { id: 1, src: HeroSectionTWD , alt: "Hero section TWD" },
+  { id: 1, src: HeroSectionTWD, alt: "Hero section TWD" },
   { id: 2, src: ClinicTWD, alt: "Clinic TWD" },
   { id: 3, src: LifestyleTWD, alt: "Lifestyle TWD" },
 ];
@@ -49,7 +49,7 @@ const RosaCleaning = [
   { id: 3, src: StepsRosa, alt: "Steps RosaCleaning" },
 ];
 
-const SlideCarousel = ({projectImages}) => {
+const SlideCarousel = ({ projectImages }) => {
   const swiperRef = useRef();
   return (
     <div
@@ -165,10 +165,12 @@ const ModuleProject = ({
               </FadeOnScroll>
 
               <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
-                <SlideCarousel projectImages={projectImages} />
-                <p className="text-sm mt-8 underline flex md:hidden">
-                  React App
-                </p>
+                <FadeOnScroll data="fade" delay="400" duration="1000">
+                  <SlideCarousel projectImages={projectImages} />
+                  <p className="text-sm mt-8 underline flex md:hidden">
+                    React App
+                  </p>
+                </FadeOnScroll>
               </div>
 
               <FadeOnScroll data="fade" delay="400" duration="1000">
@@ -236,7 +238,7 @@ const ProjectsList = () => {
         gitHub="https://github.com/twd-tech/twd-health"
         projectImages={DashboardTWD}
       />
-       <ModuleProject
+      <ModuleProject
         number="02"
         projectName="TWD Website"
         rule="Front-End Developer - Web Designer"
@@ -246,7 +248,7 @@ const ProjectsList = () => {
         gitHub="https://github.com/twd-tech/twd-health"
         projectImages={TWDWeb}
       />
-        <ModuleProject
+      <ModuleProject
         number="03"
         projectName="Rosa Cleaning"
         rule="Front-End Developer - Web Designer"
