@@ -11,51 +11,45 @@ import {
   EffectCube,
 } from "swiper/modules";
 import "swiper/css/bundle";
-import "swiper/css/effect-cube";
-import "swiper/css/navigation";
 import TiltAnimation from "./shared/TiltAnimation";
 import FadeOnScroll from "./shared/FadeOnScroll";
-
 //Note:images/icons:
 import { BsDot } from "react-icons/bs";
 import { GoArrowUpRight } from "react-icons/go";
 import { HiArrowSmallLeft } from "react-icons/hi2";
 import { HiArrowRight } from "react-icons/hi2";
-
-//Dashboard TWD
+//------Dashboard TWD
 import HeroSectionTWD from "../assets/images/dashboardTWD/homeTWD.jpeg";
 import ClinicTWD from "../assets/images/dashboardTWD/clinicTWD.jpeg";
 import LifestyleTWD from "../assets/images/dashboardTWD/lifestyleTWD.jpeg";
-
-//Website TWD
+//---Website TWD
 import HeroSectionTWDWeb from "assets/images/webTWD/homeTWDWeb.png";
 import HealthTWDWeb from "assets/images/webTWD/healthTWDWeb.png";
 import StaffTWDWeb from "assets/images/webTWD/staffTWDWeb.png";
-
-//RosaCleaning
+//---RosaCleaning
 import HeroSectionRosa from "../assets/images/rosaCleaning/heroSectionRosa.png";
 import PriceRosa from "../assets/images/rosaCleaning/priceRosa.png";
 import StepsRosa from "../assets/images/rosaCleaning/stepsRosa.png";
 
 const DashboardTWD = [
-  { id: 1, src: HeroSectionTWD , alt: "Laptop version TWD" },
-  { id: 2, src: ClinicTWD, alt: "Laptop version TWD" },
-  { id: 3, src: LifestyleTWD, alt: "Laptop version TWD" },
+  { id: 1, src: HeroSectionTWD , alt: "Hero section TWD" },
+  { id: 2, src: ClinicTWD, alt: "Clinic TWD" },
+  { id: 3, src: LifestyleTWD, alt: "Lifestyle TWD" },
 ];
 
 const TWDWeb = [
-  { id: 1, src: HeroSectionTWDWeb, alt: "Laptop version TWD" },
-  { id: 2, src: HealthTWDWeb, alt: "Laptop version TWD" },
-  { id: 3, src: StaffTWDWeb, alt: "Laptop version TWD" },
+  { id: 1, src: HeroSectionTWDWeb, alt: "Hero section website TWD" },
+  { id: 2, src: HealthTWDWeb, alt: "Health website TWD" },
+  { id: 3, src: StaffTWDWeb, alt: "Staff website TWD" },
 ];
 
 const RosaCleaning = [
-  { id: 1, src: HeroSectionRosa, alt: "Laptop version TWD" },
-  { id: 2, src: PriceRosa, alt: "Laptop version TWD" },
-  { id: 3, src: StepsRosa, alt: "Laptop version TWD" },
+  { id: 1, src: HeroSectionRosa, alt: "Hero section RosaCleaning" },
+  { id: 2, src: PriceRosa, alt: "Pricing RosaCleaning" },
+  { id: 3, src: StepsRosa, alt: "Steps RosaCleaning" },
 ];
 
-const SlideCarousel = () => {
+const SlideCarousel = ({projectImages}) => {
   const swiperRef = useRef();
   return (
     <div
@@ -93,10 +87,10 @@ const SlideCarousel = () => {
           swiperRef.current = swiper;
         }}
       >
-        {DashboardTWD.map((image) => (
+        {projectImages.map((image) => (
           <SwiperSlide className="mx-auto w-full flex mb-4" key={image.id}>
             <img
-              className="h-full mx-auto mb-4 rounded-xl"
+              className="h-full mx-auto mb-4 rounded-md"
               //width={400}
               src={image.src}
               alt={image.alt}
@@ -139,7 +133,7 @@ const ModuleProject = ({
   description,
   liveLink,
   gitHub,
-  ProjectImages,
+  projectImages,
 }) => {
   return (
     <div className="max-w-7xl flex items-center mx-auto px-4">
@@ -171,7 +165,7 @@ const ModuleProject = ({
               </FadeOnScroll>
 
               <div className="md:hidden flex flex-col justify-center pt-12 overflow-hidden">
-                <SlideCarousel />
+                <SlideCarousel projectImages={projectImages} />
                 <p className="text-sm mt-8 underline flex md:hidden">
                   React App
                 </p>
@@ -206,7 +200,7 @@ const ModuleProject = ({
         </div>
         <div className="md:flex flex-col hidden my-auto gap-y-20">
           <FadeOnScroll data="fade" delay="2000" duration="1000" offset="600">
-            {ProjectImages.map((image) => (
+            {projectImages.map((image) => (
               <div
                 key={image.id}
                 className="flex h-full flex-col my-auto items-center justify-center"
@@ -240,7 +234,7 @@ const ProjectsList = () => {
                   mobile applications."
         liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
         gitHub="https://github.com/twd-tech/twd-health"
-        ProjectImages={DashboardTWD}
+        projectImages={DashboardTWD}
       />
        <ModuleProject
         number="02"
@@ -250,7 +244,7 @@ const ProjectsList = () => {
                   mobile applications."
         liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
         gitHub="https://github.com/twd-tech/twd-health"
-        ProjectImages={TWDWeb}
+        projectImages={TWDWeb}
       />
         <ModuleProject
         number="03"
@@ -260,7 +254,7 @@ const ProjectsList = () => {
                   mobile applications."
         liveLink="https://app.thewellbeingdoctors.com/auth?redirect=/dashboard/"
         gitHub="https://github.com/twd-tech/twd-health"
-        ProjectImages={RosaCleaning}
+        projectImages={RosaCleaning}
       />
       {/* <SwiperProject /> */}
     </div>
