@@ -22,20 +22,6 @@ const Contact = () => {
           <div className="flex sm:gap-x-20 gap-x-10 sm:justify-center lg:ml-32 md:ml-24 sm:ml-12 ml-0">
             <FadeOnScroll data="fade" duration="1000" delay="500">
               <a
-                href="https://github.com/Braulin96"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="cursor-pointer rounded-full my-auto"
-              >
-                <FaGithub
-                  className="translate-y-0 hover:-translate-y-2 transition-all duration-500 ease-in-out"
-                  size={50}
-                  color="#EEEEEE"
-                />
-              </a>
-            </FadeOnScroll>
-            <FadeOnScroll data="fade" duration="1000" delay="700">
-              <a
                 href="mailto:braulinpires@hotmail.com"
                 rel="noopener noreferrer"
                 className="cursor-pointer rounded-full my-auto"
@@ -47,7 +33,7 @@ const Contact = () => {
                 />
               </a>
             </FadeOnScroll>
-            <FadeOnScroll data="fade" duration="1000" delay="900">
+            <FadeOnScroll data="fade" duration="1000" delay="700">
               <a
                 href="https://www.linkedin.com/in/braulin-pires-7a13b3145/"
                 target="_blank"
@@ -61,7 +47,7 @@ const Contact = () => {
                 />
               </a>
             </FadeOnScroll>
-            <FadeOnScroll data="fade" duration="1000" delay="1200">
+            <FadeOnScroll data="fade" duration="1000" delay="900">
               <a
                 href="https://www.instagram.com/brawlinpiress/"
                 target="_blank"
@@ -69,6 +55,20 @@ const Contact = () => {
                 className="cursor-pointer rounded-full my-auto"
               >
                 <AiFillInstagram
+                  className="translate-y-0 hover:-translate-y-2 transition-all duration-500 ease-in-out"
+                  size={50}
+                  color="#EEEEEE"
+                />
+              </a>
+            </FadeOnScroll>
+            <FadeOnScroll data="fade" duration="1000" delay="1200">
+              <a
+                href="https://github.com/Braulin96"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer rounded-full my-auto"
+              >
+                <FaGithub
                   className="translate-y-0 hover:-translate-y-2 transition-all duration-500 ease-in-out"
                   size={50}
                   color="#EEEEEE"
