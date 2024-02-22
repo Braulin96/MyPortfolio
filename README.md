@@ -1,4 +1,4 @@
-# RosaCleaning
+# MyPortfolio
 
 Welcome to my portfolio! This React-powered application is meticulously crafted to showcase my diverse skill set, highlight the projects I've passionately contributed to, and offer a glimpse into my professional journey. Explore to discover more about me, my skills, and the impactful projects I've been involved in.
 
